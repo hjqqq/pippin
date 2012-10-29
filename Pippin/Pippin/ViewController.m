@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Sprite.h"
+#import "Scene.h"
 
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
 
@@ -31,6 +32,7 @@ enum
 {
 	GLuint _program;
 	GLKMatrix4 _modelViewProjectionMatrix;
+	Scene *_scene;
 	Sprite *_sprite;
 }
 
@@ -102,6 +104,7 @@ enum
     
 	glEnable( GL_DEPTH_TEST );
 
+	_scene = [[Scene alloc] initWithBackgroundColor:ColorMake( ( 31.0f / 255.0f ), ( 31.0f / 255.0f ), ( 43.0f / 255.0f ), 1.0f )];
 	_sprite = [[Sprite alloc] init];
 	_sprite.position = GLKVector3Make( 100.0f, 100.0f, 0.0f );
 	_sprite.size = GLKVector3Make( 100.0f, 100.0f, 1.0f );
@@ -135,9 +138,8 @@ enum
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
-	glClearColor( 0.65f, 0.65f, 0.65f, 1.0f );
-	glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
-	
+	[_scene beginFrame];
+
 	// Render the object again with ES2
 	glUseProgram( _program );
 	glUniformMatrix4fv( uniforms[ UNIFORM_MODELVIEWPROJECTION_MATRIX ], 1, 0, _modelViewProjectionMatrix.m );

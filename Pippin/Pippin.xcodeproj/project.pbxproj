@@ -81,6 +81,7 @@
 		D8A331E5163E2B9700014E23 /* VertexBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VertexBuffer.m; sourceTree = "<group>"; };
 		D8A331E7163E2B9D00014E23 /* IndexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexBuffer.h; sourceTree = "<group>"; };
 		D8A331E8163E2B9D00014E23 /* IndexBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexBuffer.m; sourceTree = "<group>"; };
+		D8A331EE163F0C3C00014E23 /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +147,7 @@
 			children = (
 				D8A3318E163DFFDB00014E23 /* AppDelegate.h */,
 				D8A3318F163DFFDB00014E23 /* AppDelegate.m */,
+				D8A331EE163F0C3C00014E23 /* Color.h */,
 				D8A33197163DFFDB00014E23 /* MainStoryboard.storyboard */,
 				D8A3319A163DFFDB00014E23 /* Shader.fsh */,
 				D8A3319C163DFFDB00014E23 /* Shader.vsh */,
@@ -493,6 +495,7 @@
 				D8A331BA163DFFDC00014E23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8A331BB163DFFDC00014E23 /* Build configuration list for PBXNativeTarget "PippinTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +504,7 @@
 				D8A331BD163DFFDC00014E23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

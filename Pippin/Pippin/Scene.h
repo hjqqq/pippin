@@ -12,9 +12,9 @@
 {
 }
 
-@property (nonatomic) CGColorRef bgColor;
+@property (nonatomic) Color bgColor;
 
-- (id)initWithBackgroundColor:(CGColorRef)backgroundColor;
+- (id)initWithBackgroundColor:(Color)backgroundColor;
 
 - (void)beginFrame;
 

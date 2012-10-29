@@ -12,7 +12,7 @@
 
 @synthesize bgColor;
 
-- (id)initWithBackgroundColor:(CGColorRef)backgroundColor;
+- (id)initWithBackgroundColor:(Color)backgroundColor;
 {
 	self = [super init];
 	if( self != nil )
@@ -25,7 +25,7 @@
 
 - (void)beginFrame;
 {
-	glClearColor( 0.65f, 0.65f, 0.65f, 1.0f );
+	glClearColor( self.bgColor.r, self.bgColor.g, self.bgColor.b, self.bgColor.a );
 	glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 }
 
