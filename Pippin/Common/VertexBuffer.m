@@ -8,6 +8,8 @@
 
 #import "VertexBuffer.h"
 
+#define BUFFER_OFFSET(i) ((char *)NULL + (i))
+
 @implementation VertexBuffer
 
 - (id)initWithData:(GLfloat *)data size:(size_t)size;
@@ -18,6 +20,11 @@
 		glGenBuffers( 1, &_bufferId );
 		glBindBuffer( GL_ARRAY_BUFFER, _bufferId );
 		glBufferData( GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW );
+		
+		glEnableVertexAttribArray( GLKVertexAttribPosition );
+		glVertexAttribPointer( GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, 20, BUFFER_OFFSET( 0 ) );
+		glEnableVertexAttribArray( GLKVertexAttribTexCoord0 );
+		glVertexAttribPointer( GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 20, BUFFER_OFFSET( 12 ) );
 	}
 	
 	return self;

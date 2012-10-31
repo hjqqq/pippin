@@ -7,11 +7,13 @@
 //
 
 #import "Sprite.h"
+#import "VertexArrayObject.h"
 #import "VertexBuffer.h"
 #import "IndexBuffer.h"
 
 @implementation Sprite
 
+@synthesize vertexArrayObject;
 @synthesize vertexBuffer;
 @synthesize indexBuffer;
 @synthesize position = _position;
@@ -36,7 +38,9 @@ unsigned short gIndexData[ 4 ] =
 	self = [super init];
 	if( self != nil )
 	{
+		_effect = [[GLKBaseEffect alloc] init];
 		memcpy( _vertexData, gVertexData, sizeof( gVertexData ) );
+		self.vertexArrayObject = [[VertexArrayObject alloc] init];
 		self.vertexBuffer = [[VertexBuffer alloc] initWithData:gVertexData size:sizeof( gVertexData )];
 		self.indexBuffer = [[IndexBuffer alloc] initWithData:gIndexData size:sizeof( gIndexData )];
 		self.position = GLKVector3Make( 0.0f, 0.0f, 0.0f );
@@ -67,15 +71,22 @@ unsigned short gIndexData[ 4 ] =
 		_vertexData[ 11 ] = size_.y;
 		_vertexData[ 15 ] = size_.x;
 		_vertexData[ 16 ] = size_.y;
-		
+
 		[self.vertexBuffer update:_vertexData size:sizeof( _vertexData )];
 	}
 }
 
-- (void)draw;
+- (void)drawWithProjectionMatrix:(const GLKMatrix4*)projectionMatrix;
 {
-	[self.vertexBuffer bind];
-	[self.indexBuffer bind];
+	[self.vertexArrayObject bind];
+
+	_effect.transform.modelviewMatrix = self.transform;
+	_effect.transform.projectionMatrix = *projectionMatrix;
+	[_effect prepareToDraw];
+	
+	glDrawElements( GL_TRIANGLE_STRIP, 4, GL_UNSIGNED_SHORT, 0 );
+
+	[self.vertexArrayObject unbind];
 }
 
 @end

@@ -7,22 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GLKit/GLKit.h>
 
+@class VertexArrayObject;
 @class VertexBuffer;
 @class IndexBuffer;
 
 @interface Sprite : NSObject
 {
+	GLKBaseEffect *_effect;
 	GLfloat _vertexData[ 20 ];
 }
 
+@property (strong, nonatomic) VertexArrayObject *vertexArrayObject;
 @property (strong, nonatomic) VertexBuffer *vertexBuffer;
 @property (strong, nonatomic) IndexBuffer *indexBuffer;
 @property (nonatomic) GLKVector3 position;
 @property (nonatomic) GLKVector3 size;
 @property (nonatomic) GLKMatrix4 transform;
 
-- (void)draw;
+- (void)drawWithProjectionMatrix:(const GLKMatrix4*)projectionMatrix;
 
 @end

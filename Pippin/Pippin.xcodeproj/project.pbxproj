@@ -7,6 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D874AB801640D7140085799C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D874AB7E1640D7140085799C /* InfoPlist.strings */; };
+		D874AB821640D7140085799C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AB811640D7140085799C /* main.m */; };
+		D874AB861640D7140085799C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D874AB841640D7140085799C /* Credits.rtf */; };
+		D874AB891640D7140085799C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AB881640D7140085799C /* AppDelegate.m */; };
+		D874AB8C1640D7150085799C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D874AB8A1640D7150085799C /* MainMenu.xib */; };
+		D874AB931640D7150085799C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A331A7163DFFDC00014E23 /* SenTestingKit.framework */; };
+		D874AB941640D7150085799C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D874AB751640D7140085799C /* Cocoa.framework */; };
+		D874AB9C1640D7150085799C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D874AB9A1640D7150085799C /* InfoPlist.strings */; };
+		D874AB9F1640D7150085799C /* Pippin_MacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AB9E1640D7150085799C /* Pippin_MacTests.m */; };
+		D874ABAA1640D7CC0085799C /* MacOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = D874ABA91640D7CC0085799C /* MacOpenGLView.m */; };
+		D874ABC11640D9D20085799C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D874ABC01640D9D20085799C /* Cocoa.framework */; };
+		D874ABC31640D9DA0085799C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D874ABC21640D9DA0085799C /* OpenGL.framework */; };
+		D874ABC51640D9DF0085799C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D874ABC41640D9DF0085799C /* QuartzCore.framework */; };
+		D874ABCB1640DD510085799C /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = D874ABCA1640DD510085799C /* Game.m */; };
+		D874ABD11640DE0B0085799C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D874ABD01640DE0B0085799C /* GLKit.framework */; };
+		D874ABD41640DE4D0085799C /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = D874ABD31640DE4D0085799C /* Camera.m */; };
+		D874AC311640EB5B0085799C /* VertexArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC301640EB5A0085799C /* VertexArrayObject.m */; };
+		D874AC3D1641A30E0085799C /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC341641A30C0085799C /* Grid.m */; };
+		D874AC3E1641A30E0085799C /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC341641A30C0085799C /* Grid.m */; };
+		D874AC3F1641A30E0085799C /* IndexBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC361641A30C0085799C /* IndexBuffer.m */; };
+		D874AC401641A30E0085799C /* IndexBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC361641A30C0085799C /* IndexBuffer.m */; };
+		D874AC411641A30E0085799C /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC381641A30D0085799C /* Scene.m */; };
+		D874AC421641A30E0085799C /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC381641A30D0085799C /* Scene.m */; };
+		D874AC431641A30E0085799C /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC3A1641A30E0085799C /* Sprite.m */; };
+		D874AC441641A30E0085799C /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC3A1641A30E0085799C /* Sprite.m */; };
+		D874AC451641A30E0085799C /* VertexBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC3C1641A30E0085799C /* VertexBuffer.m */; };
+		D874AC461641A30E0085799C /* VertexBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC3C1641A30E0085799C /* VertexBuffer.m */; };
+		D874AC481641A4430085799C /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = D874ABD31640DE4D0085799C /* Camera.m */; };
+		D874AC491641A4430085799C /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = D874ABCA1640DD510085799C /* Game.m */; };
+		D874AC4A1641A4430085799C /* VertexArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC301640EB5A0085799C /* VertexArrayObject.m */; };
+		D874AC4D1641A61B0085799C /* OpenGLES2Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC4C1641A61B0085799C /* OpenGLES2Renderer.m */; };
+		D874AC511641A66F0085799C /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC501641A66F0085799C /* EAGLView.m */; };
+		D874AC531641A9050085799C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D874AC521641A9050085799C /* QuartzCore.framework */; };
+		D874AC571641E8150085799C /* OpenGLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC561641E8120085799C /* OpenGLRenderer.m */; };
+		D874AC581641E8150085799C /* OpenGLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC561641E8120085799C /* OpenGLRenderer.m */; };
 		D8A3317C163DFFDB00014E23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A3317B163DFFDB00014E23 /* UIKit.framework */; };
 		D8A3317E163DFFDB00014E23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A3317D163DFFDB00014E23 /* Foundation.framework */; };
 		D8A33180163DFFDB00014E23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A3317F163DFFDB00014E23 /* CoreGraphics.framework */; };
@@ -19,22 +54,21 @@
 		D8A33194163DFFDB00014E23 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A33193163DFFDB00014E23 /* Default@2x.png */; };
 		D8A33196163DFFDB00014E23 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A33195163DFFDB00014E23 /* Default-568h@2x.png */; };
 		D8A33199163DFFDB00014E23 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A33197163DFFDB00014E23 /* MainStoryboard.storyboard */; };
-		D8A3319B163DFFDB00014E23 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = D8A3319A163DFFDB00014E23 /* Shader.fsh */; };
-		D8A3319D163DFFDB00014E23 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = D8A3319C163DFFDB00014E23 /* Shader.vsh */; };
-		D8A331A0163DFFDB00014E23 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A3319F163DFFDB00014E23 /* ViewController.m */; };
 		D8A331A8163DFFDC00014E23 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A331A7163DFFDC00014E23 /* SenTestingKit.framework */; };
 		D8A331A9163DFFDC00014E23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A3317B163DFFDB00014E23 /* UIKit.framework */; };
 		D8A331AA163DFFDC00014E23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A3317D163DFFDB00014E23 /* Foundation.framework */; };
 		D8A331B2163DFFDC00014E23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8A331B0163DFFDC00014E23 /* InfoPlist.strings */; };
 		D8A331B5163DFFDC00014E23 /* PippinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A331B4163DFFDC00014E23 /* PippinTests.m */; };
-		D8A331C0163E003A00014E23 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A331BF163E003A00014E23 /* Grid.m */; };
-		D8A331D8163E02EA00014E23 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A331D7163E02EA00014E23 /* Scene.m */; };
-		D8A331E3163E2B2300014E23 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A331E2163E2B2300014E23 /* Sprite.m */; };
-		D8A331E6163E2B9700014E23 /* VertexBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A331E5163E2B9700014E23 /* VertexBuffer.m */; };
-		D8A331E9163E2B9D00014E23 /* IndexBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A331E8163E2B9D00014E23 /* IndexBuffer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D874AB951640D7150085799C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8A3316E163DFFDB00014E23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D874AB721640D7140085799C;
+			remoteInfo = "Pippin Mac";
+		};
 		D8A331AB163DFFDC00014E23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D8A3316E163DFFDB00014E23 /* Project object */;
@@ -45,6 +79,53 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D874AB731640D7140085799C /* Pippin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pippin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D874AB751640D7140085799C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		D874AB781640D7140085799C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D874AB791640D7140085799C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D874AB7D1640D7140085799C /* Pippin Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pippin Mac-Info.plist"; sourceTree = "<group>"; };
+		D874AB7F1640D7140085799C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D874AB811640D7140085799C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D874AB831640D7140085799C /* Pippin Mac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pippin Mac-Prefix.pch"; sourceTree = "<group>"; };
+		D874AB851640D7140085799C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D874AB871640D7140085799C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D874AB881640D7140085799C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D874AB8B1640D7150085799C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D874AB921640D7150085799C /* Pippin MacTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pippin MacTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D874AB991640D7150085799C /* Pippin MacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pippin MacTests-Info.plist"; sourceTree = "<group>"; };
+		D874AB9B1640D7150085799C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D874AB9D1640D7150085799C /* Pippin_MacTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pippin_MacTests.h; sourceTree = "<group>"; };
+		D874AB9E1640D7150085799C /* Pippin_MacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pippin_MacTests.m; sourceTree = "<group>"; };
+		D874ABA81640D7CC0085799C /* MacOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacOpenGLView.h; sourceTree = "<group>"; };
+		D874ABA91640D7CC0085799C /* MacOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacOpenGLView.m; sourceTree = "<group>"; };
+		D874ABC01640D9D20085799C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		D874ABC21640D9DA0085799C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		D874ABC41640D9DF0085799C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		D874ABC91640DD510085799C /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Common/Game.h; sourceTree = "<group>"; };
+		D874ABCA1640DD510085799C /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = Common/Game.m; sourceTree = "<group>"; };
+		D874ABD01640DE0B0085799C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
+		D874ABD21640DE4D0085799C /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Common/Camera.h; sourceTree = "<group>"; };
+		D874ABD31640DE4D0085799C /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Camera.m; path = Common/Camera.m; sourceTree = "<group>"; };
+		D874AC2F1640EB5A0085799C /* VertexArrayObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VertexArrayObject.h; path = Common/VertexArrayObject.h; sourceTree = "<group>"; };
+		D874AC301640EB5A0085799C /* VertexArrayObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VertexArrayObject.m; path = Common/VertexArrayObject.m; sourceTree = "<group>"; };
+		D874AC321641A30B0085799C /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Color.h; path = Common/Color.h; sourceTree = "<group>"; };
+		D874AC331641A30B0085799C /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Grid.h; path = Common/Grid.h; sourceTree = "<group>"; };
+		D874AC341641A30C0085799C /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Grid.m; path = Common/Grid.m; sourceTree = "<group>"; };
+		D874AC351641A30C0085799C /* IndexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexBuffer.h; path = Common/IndexBuffer.h; sourceTree = "<group>"; };
+		D874AC361641A30C0085799C /* IndexBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IndexBuffer.m; path = Common/IndexBuffer.m; sourceTree = "<group>"; };
+		D874AC371641A30D0085799C /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scene.h; path = Common/Scene.h; sourceTree = "<group>"; };
+		D874AC381641A30D0085799C /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Scene.m; path = Common/Scene.m; sourceTree = "<group>"; };
+		D874AC391641A30E0085799C /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sprite.h; path = Common/Sprite.h; sourceTree = "<group>"; };
+		D874AC3A1641A30E0085799C /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sprite.m; path = Common/Sprite.m; sourceTree = "<group>"; };
+		D874AC3B1641A30E0085799C /* VertexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VertexBuffer.h; path = Common/VertexBuffer.h; sourceTree = "<group>"; };
+		D874AC3C1641A30E0085799C /* VertexBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VertexBuffer.m; path = Common/VertexBuffer.m; sourceTree = "<group>"; };
+		D874AC4B1641A61B0085799C /* OpenGLES2Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLES2Renderer.h; sourceTree = "<group>"; };
+		D874AC4C1641A61B0085799C /* OpenGLES2Renderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLES2Renderer.m; sourceTree = "<group>"; };
+		D874AC4F1641A66F0085799C /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		D874AC501641A66F0085799C /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
+		D874AC521641A9050085799C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D874AC551641E8110085799C /* OpenGLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLRenderer.h; path = Common/OpenGLRenderer.h; sourceTree = "<group>"; };
+		D874AC561641E8120085799C /* OpenGLRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLRenderer.m; path = Common/OpenGLRenderer.m; sourceTree = "<group>"; };
 		D8A33177163DFFDB00014E23 /* Pippin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pippin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A3317B163DFFDB00014E23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D8A3317D163DFFDB00014E23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,34 +142,40 @@
 		D8A33193163DFFDB00014E23 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D8A33195163DFFDB00014E23 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D8A33198163DFFDB00014E23 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		D8A3319A163DFFDB00014E23 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
-		D8A3319C163DFFDB00014E23 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
-		D8A3319E163DFFDB00014E23 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D8A3319F163DFFDB00014E23 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D8A331A6163DFFDC00014E23 /* PippinTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PippinTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A331A7163DFFDC00014E23 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D8A331AF163DFFDC00014E23 /* PippinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PippinTests-Info.plist"; sourceTree = "<group>"; };
 		D8A331B1163DFFDC00014E23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D8A331B3163DFFDC00014E23 /* PippinTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PippinTests.h; sourceTree = "<group>"; };
 		D8A331B4163DFFDC00014E23 /* PippinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PippinTests.m; sourceTree = "<group>"; };
-		D8A331BE163E003A00014E23 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
-		D8A331BF163E003A00014E23 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
-		D8A331D6163E02EA00014E23 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
-		D8A331D7163E02EA00014E23 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
-		D8A331E1163E2B2300014E23 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
-		D8A331E2163E2B2300014E23 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sprite.m; sourceTree = "<group>"; };
-		D8A331E4163E2B9600014E23 /* VertexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexBuffer.h; sourceTree = "<group>"; };
-		D8A331E5163E2B9700014E23 /* VertexBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VertexBuffer.m; sourceTree = "<group>"; };
-		D8A331E7163E2B9D00014E23 /* IndexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexBuffer.h; sourceTree = "<group>"; };
-		D8A331E8163E2B9D00014E23 /* IndexBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexBuffer.m; sourceTree = "<group>"; };
-		D8A331EE163F0C3C00014E23 /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D874AB701640D7140085799C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D874ABD11640DE0B0085799C /* GLKit.framework in Frameworks */,
+				D874ABC51640D9DF0085799C /* QuartzCore.framework in Frameworks */,
+				D874ABC31640D9DA0085799C /* OpenGL.framework in Frameworks */,
+				D874ABC11640D9D20085799C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D874AB8E1640D7150085799C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D874AB931640D7150085799C /* SenTestingKit.framework in Frameworks */,
+				D874AB941640D7150085799C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8A33174163DFFDB00014E23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D874AC531641A9050085799C /* QuartzCore.framework in Frameworks */,
 				D8A3317C163DFFDB00014E23 /* UIKit.framework in Frameworks */,
 				D8A3317E163DFFDB00014E23 /* Foundation.framework in Frameworks */,
 				D8A33180163DFFDB00014E23 /* CoreGraphics.framework in Frameworks */,
@@ -110,12 +197,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D874AB7B1640D7140085799C /* Pippin Mac */ = {
+			isa = PBXGroup;
+			children = (
+				D874AB871640D7140085799C /* AppDelegate.h */,
+				D874AB881640D7140085799C /* AppDelegate.m */,
+				D874ABA81640D7CC0085799C /* MacOpenGLView.h */,
+				D874ABA91640D7CC0085799C /* MacOpenGLView.m */,
+				D874AC471641A35F0085799C /* Frameworks */,
+				D874AB7C1640D7140085799C /* Supporting Files */,
+			);
+			path = "Pippin Mac";
+			sourceTree = "<group>";
+		};
+		D874AB7C1640D7140085799C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D874AB8A1640D7150085799C /* MainMenu.xib */,
+				D874AB7D1640D7140085799C /* Pippin Mac-Info.plist */,
+				D874AB7E1640D7140085799C /* InfoPlist.strings */,
+				D874AB811640D7140085799C /* main.m */,
+				D874AB831640D7140085799C /* Pippin Mac-Prefix.pch */,
+				D874AB841640D7140085799C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D874AB971640D7150085799C /* Pippin Mac Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D874AB9D1640D7150085799C /* Pippin_MacTests.h */,
+				D874AB9E1640D7150085799C /* Pippin_MacTests.m */,
+				D874AB981640D7150085799C /* Supporting Files */,
+			);
+			name = "Pippin Mac Tests";
+			path = "Pippin MacTests";
+			sourceTree = "<group>";
+		};
+		D874AB981640D7150085799C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D874AB991640D7150085799C /* Pippin MacTests-Info.plist */,
+				D874AB9A1640D7150085799C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D874ABA71640D7430085799C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D874ABD21640DE4D0085799C /* Camera.h */,
+				D874ABD31640DE4D0085799C /* Camera.m */,
+				D874AC321641A30B0085799C /* Color.h */,
+				D874ABC91640DD510085799C /* Game.h */,
+				D874ABCA1640DD510085799C /* Game.m */,
+				D874AC331641A30B0085799C /* Grid.h */,
+				D874AC341641A30C0085799C /* Grid.m */,
+				D874AC351641A30C0085799C /* IndexBuffer.h */,
+				D874AC361641A30C0085799C /* IndexBuffer.m */,
+				D874AC551641E8110085799C /* OpenGLRenderer.h */,
+				D874AC561641E8120085799C /* OpenGLRenderer.m */,
+				D874AC371641A30D0085799C /* Scene.h */,
+				D874AC381641A30D0085799C /* Scene.m */,
+				D874AC391641A30E0085799C /* Sprite.h */,
+				D874AC3A1641A30E0085799C /* Sprite.m */,
+				D874AC2F1640EB5A0085799C /* VertexArrayObject.h */,
+				D874AC301640EB5A0085799C /* VertexArrayObject.m */,
+				D874AC3B1641A30E0085799C /* VertexBuffer.h */,
+				D874AC3C1641A30E0085799C /* VertexBuffer.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		D874AC471641A35F0085799C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D874ABC01640D9D20085799C /* Cocoa.framework */,
+				D874ABD01640DE0B0085799C /* GLKit.framework */,
+				D874ABC21640D9DA0085799C /* OpenGL.framework */,
+				D874ABC41640D9DF0085799C /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8A3316C163DFFDB00014E23 = {
 			isa = PBXGroup;
 			children = (
-				D8A33185163DFFDB00014E23 /* Pippin */,
-				D8A331AD163DFFDC00014E23 /* PippinTests */,
-				D8A3317A163DFFDB00014E23 /* Frameworks */,
+				D874ABA71640D7430085799C /* Common */,
+				D8A33185163DFFDB00014E23 /* Pippin iOS */,
+				D874AB7B1640D7140085799C /* Pippin Mac */,
+				D8A331AD163DFFDC00014E23 /* Pippin iOS Tests */,
+				D874AB971640D7150085799C /* Pippin Mac Tests */,
 				D8A33178163DFFDB00014E23 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +297,8 @@
 			children = (
 				D8A33177163DFFDB00014E23 /* Pippin.app */,
 				D8A331A6163DFFDC00014E23 /* PippinTests.octest */,
+				D874AB731640D7140085799C /* Pippin.app */,
+				D874AB921640D7150085799C /* Pippin MacTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,45 +306,41 @@
 		D8A3317A163DFFDB00014E23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D8A3317B163DFFDB00014E23 /* UIKit.framework */,
-				D8A3317D163DFFDB00014E23 /* Foundation.framework */,
+				D874AB781640D7140085799C /* AppKit.framework */,
+				D874AB751640D7140085799C /* Cocoa.framework */,
+				D874AB791640D7140085799C /* CoreData.framework */,
 				D8A3317F163DFFDB00014E23 /* CoreGraphics.framework */,
+				D8A3317D163DFFDB00014E23 /* Foundation.framework */,
 				D8A33181163DFFDB00014E23 /* GLKit.framework */,
 				D8A33183163DFFDB00014E23 /* OpenGLES.framework */,
+				D874AC521641A9050085799C /* QuartzCore.framework */,
 				D8A331A7163DFFDC00014E23 /* SenTestingKit.framework */,
+				D8A3317B163DFFDB00014E23 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		D8A33185163DFFDB00014E23 /* Pippin */ = {
+		D8A33185163DFFDB00014E23 /* Pippin iOS */ = {
 			isa = PBXGroup;
 			children = (
 				D8A3318E163DFFDB00014E23 /* AppDelegate.h */,
 				D8A3318F163DFFDB00014E23 /* AppDelegate.m */,
-				D8A331EE163F0C3C00014E23 /* Color.h */,
-				D8A33197163DFFDB00014E23 /* MainStoryboard.storyboard */,
-				D8A3319A163DFFDB00014E23 /* Shader.fsh */,
-				D8A3319C163DFFDB00014E23 /* Shader.vsh */,
-				D8A3319E163DFFDB00014E23 /* ViewController.h */,
-				D8A3319F163DFFDB00014E23 /* ViewController.m */,
+				D874AC4F1641A66F0085799C /* EAGLView.h */,
+				D874AC501641A66F0085799C /* EAGLView.m */,
+				D874AC4B1641A61B0085799C /* OpenGLES2Renderer.h */,
+				D874AC4C1641A61B0085799C /* OpenGLES2Renderer.m */,
+				D8A3317A163DFFDB00014E23 /* Frameworks */,
 				D8A33186163DFFDB00014E23 /* Supporting Files */,
-				D8A331BE163E003A00014E23 /* Grid.h */,
-				D8A331BF163E003A00014E23 /* Grid.m */,
-				D8A331D6163E02EA00014E23 /* Scene.h */,
-				D8A331D7163E02EA00014E23 /* Scene.m */,
-				D8A331E1163E2B2300014E23 /* Sprite.h */,
-				D8A331E2163E2B2300014E23 /* Sprite.m */,
-				D8A331E4163E2B9600014E23 /* VertexBuffer.h */,
-				D8A331E5163E2B9700014E23 /* VertexBuffer.m */,
-				D8A331E7163E2B9D00014E23 /* IndexBuffer.h */,
-				D8A331E8163E2B9D00014E23 /* IndexBuffer.m */,
 			);
+			name = "Pippin iOS";
 			path = Pippin;
 			sourceTree = "<group>";
 		};
 		D8A33186163DFFDB00014E23 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D8A33197163DFFDB00014E23 /* MainStoryboard.storyboard */,
 				D8A33187163DFFDB00014E23 /* Pippin-Info.plist */,
 				D8A33188163DFFDB00014E23 /* InfoPlist.strings */,
 				D8A3318B163DFFDB00014E23 /* main.m */,
@@ -182,13 +352,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D8A331AD163DFFDC00014E23 /* PippinTests */ = {
+		D8A331AD163DFFDC00014E23 /* Pippin iOS Tests */ = {
 			isa = PBXGroup;
 			children = (
 				D8A331B3163DFFDC00014E23 /* PippinTests.h */,
 				D8A331B4163DFFDC00014E23 /* PippinTests.m */,
 				D8A331AE163DFFDC00014E23 /* Supporting Files */,
 			);
+			name = "Pippin iOS Tests";
 			path = PippinTests;
 			sourceTree = "<group>";
 		};
@@ -204,9 +375,45 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D8A33176163DFFDB00014E23 /* Pippin */ = {
+		D874AB721640D7140085799C /* Pippin Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8A331B8163DFFDC00014E23 /* Build configuration list for PBXNativeTarget "Pippin" */;
+			buildConfigurationList = D874ABA41640D7150085799C /* Build configuration list for PBXNativeTarget "Pippin Mac" */;
+			buildPhases = (
+				D874AB6F1640D7140085799C /* Sources */,
+				D874AB701640D7140085799C /* Frameworks */,
+				D874AB711640D7140085799C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pippin Mac";
+			productName = "Pippin Mac";
+			productReference = D874AB731640D7140085799C /* Pippin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D874AB911640D7150085799C /* Pippin MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D874ABA51640D7150085799C /* Build configuration list for PBXNativeTarget "Pippin MacTests" */;
+			buildPhases = (
+				D874AB8D1640D7150085799C /* Sources */,
+				D874AB8E1640D7150085799C /* Frameworks */,
+				D874AB8F1640D7150085799C /* Resources */,
+				D874AB901640D7150085799C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D874AB961640D7150085799C /* PBXTargetDependency */,
+			);
+			name = "Pippin MacTests";
+			productName = "Pippin MacTests";
+			productReference = D874AB921640D7150085799C /* Pippin MacTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		D8A33176163DFFDB00014E23 /* Pippin iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8A331B8163DFFDC00014E23 /* Build configuration list for PBXNativeTarget "Pippin iOS" */;
 			buildPhases = (
 				D8A33173163DFFDB00014E23 /* Sources */,
 				D8A33174163DFFDB00014E23 /* Frameworks */,
@@ -216,7 +423,7 @@
 			);
 			dependencies = (
 			);
-			name = Pippin;
+			name = "Pippin iOS";
 			productName = Pippin;
 			productReference = D8A33177163DFFDB00014E23 /* Pippin.app */;
 			productType = "com.apple.product-type.application";
@@ -261,13 +468,33 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D8A33176163DFFDB00014E23 /* Pippin */,
+				D8A33176163DFFDB00014E23 /* Pippin iOS */,
 				D8A331A5163DFFDC00014E23 /* PippinTests */,
+				D874AB721640D7140085799C /* Pippin Mac */,
+				D874AB911640D7150085799C /* Pippin MacTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D874AB711640D7140085799C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D874AB801640D7140085799C /* InfoPlist.strings in Resources */,
+				D874AB861640D7140085799C /* Credits.rtf in Resources */,
+				D874AB8C1640D7150085799C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D874AB8F1640D7150085799C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D874AB9C1640D7150085799C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8A33175163DFFDB00014E23 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,8 +504,6 @@
 				D8A33194163DFFDB00014E23 /* Default@2x.png in Resources */,
 				D8A33196163DFFDB00014E23 /* Default-568h@2x.png in Resources */,
 				D8A33199163DFFDB00014E23 /* MainStoryboard.storyboard in Resources */,
-				D8A3319B163DFFDB00014E23 /* Shader.fsh in Resources */,
-				D8A3319D163DFFDB00014E23 /* Shader.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +518,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		D874AB901640D7150085799C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 		D8A331A4163DFFDC00014E23 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,18 +547,50 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D874AB6F1640D7140085799C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D874AB821640D7140085799C /* main.m in Sources */,
+				D874AB891640D7140085799C /* AppDelegate.m in Sources */,
+				D874ABAA1640D7CC0085799C /* MacOpenGLView.m in Sources */,
+				D874ABCB1640DD510085799C /* Game.m in Sources */,
+				D874ABD41640DE4D0085799C /* Camera.m in Sources */,
+				D874AC311640EB5B0085799C /* VertexArrayObject.m in Sources */,
+				D874AC3E1641A30E0085799C /* Grid.m in Sources */,
+				D874AC401641A30E0085799C /* IndexBuffer.m in Sources */,
+				D874AC421641A30E0085799C /* Scene.m in Sources */,
+				D874AC441641A30E0085799C /* Sprite.m in Sources */,
+				D874AC461641A30E0085799C /* VertexBuffer.m in Sources */,
+				D874AC581641E8150085799C /* OpenGLRenderer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D874AB8D1640D7150085799C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D874AB9F1640D7150085799C /* Pippin_MacTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8A33173163DFFDB00014E23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D874AC481641A4430085799C /* Camera.m in Sources */,
+				D874AC491641A4430085799C /* Game.m in Sources */,
+				D874AC4A1641A4430085799C /* VertexArrayObject.m in Sources */,
 				D8A3318C163DFFDB00014E23 /* main.m in Sources */,
 				D8A33190163DFFDB00014E23 /* AppDelegate.m in Sources */,
-				D8A331A0163DFFDB00014E23 /* ViewController.m in Sources */,
-				D8A331C0163E003A00014E23 /* Grid.m in Sources */,
-				D8A331D8163E02EA00014E23 /* Scene.m in Sources */,
-				D8A331E3163E2B2300014E23 /* Sprite.m in Sources */,
-				D8A331E6163E2B9700014E23 /* VertexBuffer.m in Sources */,
-				D8A331E9163E2B9D00014E23 /* IndexBuffer.m in Sources */,
+				D874AC3D1641A30E0085799C /* Grid.m in Sources */,
+				D874AC3F1641A30E0085799C /* IndexBuffer.m in Sources */,
+				D874AC411641A30E0085799C /* Scene.m in Sources */,
+				D874AC431641A30E0085799C /* Sprite.m in Sources */,
+				D874AC451641A30E0085799C /* VertexBuffer.m in Sources */,
+				D874AC4D1641A61B0085799C /* OpenGLES2Renderer.m in Sources */,
+				D874AC511641A66F0085799C /* EAGLView.m in Sources */,
+				D874AC571641E8150085799C /* OpenGLRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,14 +605,51 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D874AB961640D7150085799C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D874AB721640D7140085799C /* Pippin Mac */;
+			targetProxy = D874AB951640D7150085799C /* PBXContainerItemProxy */;
+		};
 		D8A331AC163DFFDC00014E23 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D8A33176163DFFDB00014E23 /* Pippin */;
+			target = D8A33176163DFFDB00014E23 /* Pippin iOS */;
 			targetProxy = D8A331AB163DFFDC00014E23 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D874AB7E1640D7140085799C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D874AB7F1640D7140085799C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D874AB841640D7140085799C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D874AB851640D7140085799C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		D874AB8A1640D7150085799C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D874AB8B1640D7150085799C /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		D874AB9A1640D7150085799C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D874AB9B1640D7150085799C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		D8A33188163DFFDB00014E23 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -370,6 +677,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D874ABA01640D7150085799C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pippin Mac/Pippin Mac-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Pippin Mac/Pippin Mac-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D874ABA11640D7150085799C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pippin Mac/Pippin Mac-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Pippin Mac/Pippin Mac-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D874ABA21640D7150085799C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Pippin Mac.app/Contents/MacOS/Pippin Mac";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pippin Mac/Pippin Mac-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Pippin MacTests/Pippin MacTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D874ABA31640D7150085799C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Pippin Mac.app/Contents/MacOS/Pippin Mac";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pippin Mac/Pippin Mac-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Pippin MacTests/Pippin MacTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		D8A331B6163DFFDC00014E23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -394,6 +783,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Pippin;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -415,6 +805,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = Pippin;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -426,7 +817,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pippin/Pippin-Prefix.pch";
 				INFOPLIST_FILE = "Pippin/Pippin-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -437,7 +827,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pippin/Pippin-Prefix.pch";
 				INFOPLIST_FILE = "Pippin/Pippin-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -479,6 +868,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D874ABA41640D7150085799C /* Build configuration list for PBXNativeTarget "Pippin Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D874ABA01640D7150085799C /* Debug */,
+				D874ABA11640D7150085799C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D874ABA51640D7150085799C /* Build configuration list for PBXNativeTarget "Pippin MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D874ABA21640D7150085799C /* Debug */,
+				D874ABA31640D7150085799C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D8A33171163DFFDB00014E23 /* Build configuration list for PBXProject "Pippin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -488,7 +893,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8A331B8163DFFDC00014E23 /* Build configuration list for PBXNativeTarget "Pippin" */ = {
+		D8A331B8163DFFDC00014E23 /* Build configuration list for PBXNativeTarget "Pippin iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D8A331B9163DFFDC00014E23 /* Debug */,

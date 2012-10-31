@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class Camera;
+@class Sprite;
+
 @interface Scene : NSObject
 {
+	Camera *_camera;
+	NSMutableArray *_sprites;
 }
 
 @property (nonatomic) Color bgColor;
@@ -17,5 +22,8 @@
 - (id)initWithBackgroundColor:(Color)backgroundColor;
 
 - (void)beginFrame;
+- (void)draw;
+
+- (void)addSprite:(Sprite *)sprite;
 
 @end
