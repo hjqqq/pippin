@@ -16,7 +16,7 @@
 	Game *_game;
 }
 
-- (id)initWithDefaultFBO:(GLuint)defaultFBOName;
+- (id)initWithDefaultFBO:(GLuint)defaultFBOName width:(unsigned int)width height:(unsigned int)height;
 
 - (void)render;
 - (void)resizeWithWidth:(GLuint)width height:(GLuint)height;

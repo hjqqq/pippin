@@ -105,7 +105,7 @@ static CVReturn OnDisplayLink( CVDisplayLinkRef displayLink, const CVTimeStamp *
 	[[self openGLContext] setValues:&swapInt forParameter:NSOpenGLCPSwapInterval];
 	
 	// Init our renderer.  Use 0 for the defaultFBO which is appropriate for MacOS (but not iOS)
-	_renderer = [[OpenGLRenderer alloc] initWithDefaultFBO:0];
+	_renderer = [[OpenGLRenderer alloc] initWithDefaultFBO:0 width:self.frame.size.width height:self.frame.size.height];
 }
 
 - (void)draw;

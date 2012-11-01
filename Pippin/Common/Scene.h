@@ -19,7 +19,9 @@
 
 @property (nonatomic) Color bgColor;
 
-- (id)initWithBackgroundColor:(Color)backgroundColor;
+- (id)initWithViewportSize:(GLKVector2)size backgroundColor:(Color)backgroundColor;
+
+- (void)viewportSizeChanged:(GLKVector2)size;
 
 - (void)beginFrame;
 - (void)draw;

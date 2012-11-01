@@ -19,7 +19,7 @@
 
 @implementation OpenGLES2Renderer
 
-- (id) initWithContext:(EAGLContext *)context drawable:(id<EAGLDrawable>)drawable;
+- (id)initWithContext:(EAGLContext *)context drawable:(id<EAGLDrawable>)drawable;
 {
 	glGenFramebuffers( 1, &_defaultFBOName );
 
@@ -53,7 +53,7 @@
 		return nil;
 	}
 	
-	self = [super initWithDefaultFBO:_defaultFBOName];
+	self = [super initWithDefaultFBO:_defaultFBOName width:backingWidth height:backingHeight];
 	if( self == nil )
 	{
 		glDeleteFramebuffers( 1, &_defaultFBOName );
@@ -84,7 +84,7 @@
 	glBindFramebuffer( GL_FRAMEBUFFER, _defaultFBOName );
 
 	[super render];
-	    
+	
 	glBindRenderbuffer( GL_RENDERBUFFER, _colorRenderbuffer );
 	[_context presentRenderbuffer:GL_RENDERBUFFER];
 }

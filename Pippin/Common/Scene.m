@@ -14,17 +14,22 @@
 
 @synthesize bgColor;
 
-- (id)initWithBackgroundColor:(Color)backgroundColor;
+- (id)initWithViewportSize:(GLKVector2)size backgroundColor:(Color)backgroundColor;
 {
 	self = [super init];
 	if( self != nil )
 	{
-		_camera = [[Camera alloc] initWithViewportWidth:800.0f height:600.0f];
+		_camera = [[Camera alloc] initWithViewportWidth:size.x height:size.y];
 		_sprites = [[NSMutableArray alloc] init];
 		self.bgColor = backgroundColor;
 	}
 	
 	return self;
+}
+
+- (void)viewportSizeChanged:(GLKVector2)size;
+{
+	_camera.size = size;
 }
 
 - (void)beginFrame;

@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="2" sceneMemberID="viewController">
+                <viewController id="2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3" customClass="EAGLView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

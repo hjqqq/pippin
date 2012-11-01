@@ -12,12 +12,13 @@
 
 @implementation Game
 
-- (id)init;
+- (id)initWithViewportSize:(GLKVector2)size;
 {
 	self = [super init];
 	if( self != nil )
 	{
-		_scene = [[Scene alloc] initWithBackgroundColor:ColorMake( ( 31.0f / 255.0f ), ( 31.0f / 255.0f ), ( 43.0f / 255.0f ), 1.0f )];
+		Color bgColor = ColorMake( ( 31.0f / 255.0f ), ( 31.0f / 255.0f ), ( 43.0f / 255.0f ), 1.0f );
+		_scene = [[Scene alloc] initWithViewportSize:size backgroundColor:bgColor];
 		
 		Sprite *sprite = [[Sprite alloc] init];
 		sprite.position = GLKVector3Make( 100.0f, 100.0f, 0.0f );
@@ -32,6 +33,11 @@
 {
 	[_scene beginFrame];
 	[_scene draw];
+}
+
+- (void)viewportSizeChanged:(GLKVector2)size;
+{
+	[_scene viewportSizeChanged:size];
 }
 
 @end

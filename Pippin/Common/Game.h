@@ -15,6 +15,10 @@
 	Scene *_scene;
 }
 
+- (id)initWithViewportSize:(GLKVector2)size;
+
 - (void)draw;
+
+- (void)viewportSizeChanged:(GLKVector2)size;
 
 @end
