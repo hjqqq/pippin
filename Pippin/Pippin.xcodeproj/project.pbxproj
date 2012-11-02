@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D826A2171643822900F9E0F6 /* data in Resources */ = {isa = PBXBuildFile; fileRef = D826A2161643822900F9E0F6 /* data */; };
+		D826A2181643822900F9E0F6 /* data in Resources */ = {isa = PBXBuildFile; fileRef = D826A2161643822900F9E0F6 /* data */; };
 		D874AB801640D7140085799C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D874AB7E1640D7140085799C /* InfoPlist.strings */; };
 		D874AB821640D7140085799C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AB811640D7140085799C /* main.m */; };
 		D874AB861640D7140085799C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D874AB841640D7140085799C /* Credits.rtf */; };
@@ -79,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D826A2161643822900F9E0F6 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
 		D874AB731640D7140085799C /* Pippin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pippin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D874AB751640D7140085799C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		D874AB781640D7140085799C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -283,6 +286,7 @@
 		D8A3316C163DFFDB00014E23 = {
 			isa = PBXGroup;
 			children = (
+				D826A2161643822900F9E0F6 /* data */,
 				D874ABA71640D7430085799C /* Common */,
 				D8A33185163DFFDB00014E23 /* Pippin iOS */,
 				D874AB7B1640D7140085799C /* Pippin Mac */,
@@ -484,6 +488,7 @@
 				D874AB801640D7140085799C /* InfoPlist.strings in Resources */,
 				D874AB861640D7140085799C /* Credits.rtf in Resources */,
 				D874AB8C1640D7150085799C /* MainMenu.xib in Resources */,
+				D826A2181643822900F9E0F6 /* data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +509,7 @@
 				D8A33194163DFFDB00014E23 /* Default@2x.png in Resources */,
 				D8A33196163DFFDB00014E23 /* Default-568h@2x.png in Resources */,
 				D8A33199163DFFDB00014E23 /* MainStoryboard.storyboard in Resources */,
+				D826A2171643822900F9E0F6 /* data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,6 +881,7 @@
 				D874ABA11640D7150085799C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D874ABA51640D7150085799C /* Build configuration list for PBXNativeTarget "Pippin MacTests" */ = {
 			isa = XCConfigurationList;
@@ -883,6 +890,7 @@
 				D874ABA31640D7150085799C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8A33171163DFFDB00014E23 /* Build configuration list for PBXProject "Pippin" */ = {
 			isa = XCConfigurationList;

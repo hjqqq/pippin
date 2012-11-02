@@ -21,9 +21,13 @@
 @property (strong, nonatomic) VertexArrayObject *vertexArrayObject;
 @property (strong, nonatomic) VertexBuffer *vertexBuffer;
 @property (strong, nonatomic) IndexBuffer *indexBuffer;
+@property (strong, nonatomic) GLKTextureInfo *texture;
+
 @property (nonatomic) GLKVector3 position;
 @property (nonatomic) GLKVector3 size;
 @property (nonatomic) GLKMatrix4 transform;
+
+- (void)setTexCoordsMin:(GLKVector2)min max:(GLKVector2)max;
 
 - (void)drawWithProjectionMatrix:(const GLKMatrix4*)projectionMatrix;
 

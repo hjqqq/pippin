@@ -46,6 +46,10 @@ unsigned short gIndexData[ 4 ] =
 		self.position = GLKVector3Make( 0.0f, 0.0f, 0.0f );
 		self.size = GLKVector3Make( 0.0f, 0.0f, 0.0f );
 		self.transform = GLKMatrix4Identity;
+		
+		NSError *error;
+		NSString *path = [[NSBundle mainBundle] pathForResource:@"data/textures/grid_background.png" ofType:nil];
+		self.texture = [GLKTextureLoader textureWithContentsOfFile:path options:nil error:&error];
 	}
 	
 	return self;
@@ -76,14 +80,37 @@ unsigned short gIndexData[ 4 ] =
 	}
 }
 
+- (void)setTexCoordsMin:(GLKVector2)min max:(GLKVector2)max;
+{
+	_vertexData[ 3 ] = min.x;
+	_vertexData[ 13 ] = min.x;
+	_vertexData[ 14 ] = min.y;
+	_vertexData[ 19 ] = min.y;
+	
+	_vertexData[ 8 ] = max.x;
+	_vertexData[ 18 ] = max.x;
+	_vertexData[ 4 ] = max.y;
+	_vertexData[ 9 ] = max.y;
+	
+	[self.vertexBuffer update:_vertexData size:sizeof( _vertexData )];
+}
+
 - (void)drawWithProjectionMatrix:(const GLKMatrix4*)projectionMatrix;
 {
 	[self.vertexArrayObject bind];
 
+	_effect.texture2d0.name = self.texture.name;
+	_effect.texture2d0.enabled = YES;
 	_effect.transform.modelviewMatrix = self.transform;
 	_effect.transform.projectionMatrix = *projectionMatrix;
 	[_effect prepareToDraw];
 	
+	glEnable( GL_TEXTURE_2D );
+	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT );
+	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT );
+			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
 	glDrawElements( GL_TRIANGLE_STRIP, 4, GL_UNSIGNED_SHORT, 0 );
 
 	[self.vertexArrayObject unbind];
