@@ -9,8 +9,14 @@
 #import "Game.h"
 #import "Scene.h"
 #import "Sprite.h"
+#import "SpriteController.h"
+#import "EntityController.h"
 
 @implementation Game
+
+@synthesize spriteController;
+@synthesize entityController;
+@synthesize scene;
 
 - (id)initWithViewportSize:(GLKVector2)size;
 {
@@ -18,13 +24,11 @@
 	if( self != nil )
 	{
 		Color bgColor = ColorMake( 0.0f, 0.0f, 0.0f, 1.0f );
-		_scene = [[Scene alloc] initWithViewportSize:size backgroundColor:bgColor];
+		self.spriteController = [[SpriteController alloc] initWithContentsOfFile:@"data/json/sprites.json"];
+		self.entityController = [[EntityController alloc] initWithContentsOfFile:@"data/json/entities.json" spriteController:self.spriteController];
+		self.scene = [[Scene alloc] initWithViewportSize:size backgroundColor:bgColor];
 		
-		Sprite *sprite = [[Sprite alloc] init];
-		sprite.position = GLKVector3Make( 0.0f, 0.0f, 0.0f );
-		sprite.size = GLKVector3Make( 800.0f, 600.0f, 1.0f );
-		[sprite setTexCoordsMin:GLKVector2Make( 0.0f, 0.0f ) max:GLKVector2Make( 50.0f, 37.5f )];
-		[_scene addSprite:sprite];
+		[self.scene addEntity:[self.entityController entityNamed:@"button"]];
 	}
 	
 	return self;
@@ -32,13 +36,13 @@
 
 - (void)draw;
 {
-	[_scene beginFrame];
-	[_scene draw];
+	[self.scene beginFrame];
+	[self.scene render];
 }
 
 - (void)viewportSizeChanged:(GLKVector2)size;
 {
-	[_scene viewportSizeChanged:size];
+	[self.scene viewportSizeChanged:size];
 }
 
 @end

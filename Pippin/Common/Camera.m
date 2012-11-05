@@ -25,9 +25,9 @@
 	return self;
 }
 
-- (GLKMatrix4 *)projectionMatrix;
+- (GLKMatrix4)projectionMatrix;
 {
-	return &_projectionMatrix;
+	return _projectionMatrix;
 }
 
 - (void)setSize:(GLKVector2)aSize;

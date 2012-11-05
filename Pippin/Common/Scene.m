@@ -8,7 +8,7 @@
 
 #import "Scene.h"
 #import "Camera.h"
-#import "Sprite.h"
+#import "Entity.h"
 
 @implementation Scene
 
@@ -20,7 +20,7 @@
 	if( self != nil )
 	{
 		_camera = [[Camera alloc] initWithViewportWidth:size.x height:size.y];
-		_sprites = [[NSMutableArray alloc] init];
+		_entities = [[NSMutableArray alloc] init];
 		self.bgColor = backgroundColor;
 	}
 	
@@ -38,17 +38,17 @@
 	glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 }
 
-- (void)draw;
+- (void)render;
 {
-	for( Sprite *sprite in _sprites )
+	for( Entity *entity in _entities )
 	{
-		[sprite drawWithProjectionMatrix:_camera.projectionMatrix];
+		[entity renderWithCamera:_camera];
 	}
 }
 
-- (void)addSprite:(Sprite *)sprite;
+- (void)addEntity:(Entity *)entity;
 {
-	[_sprites addObject:sprite];
+	[_entities addObject:entity];
 }
 
 @end

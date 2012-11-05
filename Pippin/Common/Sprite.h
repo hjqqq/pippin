@@ -8,27 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@class VertexArrayObject;
-@class VertexBuffer;
-@class IndexBuffer;
-
 @interface Sprite : NSObject
 {
-	GLKBaseEffect *_effect;
-	GLfloat _vertexData[ 20 ];
 }
 
-@property (strong, nonatomic) VertexArrayObject *vertexArrayObject;
-@property (strong, nonatomic) VertexBuffer *vertexBuffer;
-@property (strong, nonatomic) IndexBuffer *indexBuffer;
+@property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) GLKTextureInfo *texture;
 
-@property (nonatomic) GLKVector3 position;
-@property (nonatomic) GLKVector3 size;
-@property (nonatomic) GLKMatrix4 transform;
-
-- (void)setTexCoordsMin:(GLKVector2)min max:(GLKVector2)max;
-
-- (void)drawWithProjectionMatrix:(const GLKMatrix4*)projectionMatrix;
+- (id)initWithName:(NSString *)aName texturePath:(NSString *)texturePath size:(GLKVector2)size numFrames:(unsigned int)numFrames;
 
 @end

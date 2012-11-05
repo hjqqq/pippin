@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @class Camera;
-@class Sprite;
+@class Entity;
 
 @interface Scene : NSObject
 {
 	Camera *_camera;
-	NSMutableArray *_sprites;
+	NSMutableArray *_entities;
 }
 
 @property (nonatomic) Color bgColor;
@@ -24,8 +24,8 @@
 - (void)viewportSizeChanged:(GLKVector2)size;
 
 - (void)beginFrame;
-- (void)draw;
+- (void)render;
 
-- (void)addSprite:(Sprite *)sprite;
+- (void)addEntity:(Entity *)entity;
 
 @end

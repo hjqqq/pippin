@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D811DF4B16475282001EE707 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF4A16475281001EE707 /* Button.m */; };
+		D811DF4E1647569C001EE707 /* SpriteController.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF4D1647569C001EE707 /* SpriteController.m */; };
+		D811DF4F16475796001EE707 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF4A16475281001EE707 /* Button.m */; };
+		D811DF5016475796001EE707 /* SpriteController.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF4D1647569C001EE707 /* SpriteController.m */; };
+		D811DF5316475B6D001EE707 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5216475B6D001EE707 /* Entity.m */; };
+		D811DF5A16479B25001EE707 /* MeshRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5916479B24001EE707 /* MeshRenderer.m */; };
+		D811DF5D16479D5B001EE707 /* EntityController.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5C16479D5B001EE707 /* EntityController.m */; };
+		D811DF5E16479EBB001EE707 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5216475B6D001EE707 /* Entity.m */; };
+		D811DF5F16479EBB001EE707 /* EntityController.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5C16479D5B001EE707 /* EntityController.m */; };
+		D811DF6016479EBB001EE707 /* MeshRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5916479B24001EE707 /* MeshRenderer.m */; };
 		D826A2171643822900F9E0F6 /* data in Resources */ = {isa = PBXBuildFile; fileRef = D826A2161643822900F9E0F6 /* data */; };
 		D826A2181643822900F9E0F6 /* data in Resources */ = {isa = PBXBuildFile; fileRef = D826A2161643822900F9E0F6 /* data */; };
 		D874AB801640D7140085799C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D874AB7E1640D7140085799C /* InfoPlist.strings */; };
@@ -81,6 +91,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D811DF4916475281001EE707 /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Button.h; path = Common/Button.h; sourceTree = "<group>"; };
+		D811DF4A16475281001EE707 /* Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Button.m; path = Common/Button.m; sourceTree = "<group>"; };
+		D811DF4C1647569C001EE707 /* SpriteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpriteController.h; path = Common/SpriteController.h; sourceTree = "<group>"; };
+		D811DF4D1647569C001EE707 /* SpriteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpriteController.m; path = Common/SpriteController.m; sourceTree = "<group>"; };
+		D811DF5116475B6D001EE707 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Common/Entity.h; sourceTree = "<group>"; };
+		D811DF5216475B6D001EE707 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity.m; path = Common/Entity.m; sourceTree = "<group>"; };
+		D811DF5816479B24001EE707 /* MeshRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeshRenderer.h; path = Common/MeshRenderer.h; sourceTree = "<group>"; };
+		D811DF5916479B24001EE707 /* MeshRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeshRenderer.m; path = Common/MeshRenderer.m; sourceTree = "<group>"; };
+		D811DF5B16479D5B001EE707 /* EntityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityController.h; path = Common/EntityController.h; sourceTree = "<group>"; };
+		D811DF5C16479D5B001EE707 /* EntityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntityController.m; path = Common/EntityController.m; sourceTree = "<group>"; };
 		D826A2161643822900F9E0F6 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
 		D874AB731640D7140085799C /* Pippin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pippin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D874AB751640D7140085799C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
@@ -249,21 +269,31 @@
 		D874ABA71640D7430085799C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D811DF4916475281001EE707 /* Button.h */,
+				D811DF4A16475281001EE707 /* Button.m */,
 				D874ABD21640DE4D0085799C /* Camera.h */,
 				D874ABD31640DE4D0085799C /* Camera.m */,
 				D874AC321641A30B0085799C /* Color.h */,
+				D811DF5116475B6D001EE707 /* Entity.h */,
+				D811DF5216475B6D001EE707 /* Entity.m */,
+				D811DF5B16479D5B001EE707 /* EntityController.h */,
+				D811DF5C16479D5B001EE707 /* EntityController.m */,
 				D874ABC91640DD510085799C /* Game.h */,
 				D874ABCA1640DD510085799C /* Game.m */,
 				D874AC331641A30B0085799C /* Grid.h */,
 				D874AC341641A30C0085799C /* Grid.m */,
 				D874AC351641A30C0085799C /* IndexBuffer.h */,
 				D874AC361641A30C0085799C /* IndexBuffer.m */,
+				D811DF5816479B24001EE707 /* MeshRenderer.h */,
+				D811DF5916479B24001EE707 /* MeshRenderer.m */,
 				D874AC551641E8110085799C /* OpenGLRenderer.h */,
 				D874AC561641E8120085799C /* OpenGLRenderer.m */,
 				D874AC371641A30D0085799C /* Scene.h */,
 				D874AC381641A30D0085799C /* Scene.m */,
 				D874AC391641A30E0085799C /* Sprite.h */,
 				D874AC3A1641A30E0085799C /* Sprite.m */,
+				D811DF4C1647569C001EE707 /* SpriteController.h */,
+				D811DF4D1647569C001EE707 /* SpriteController.m */,
 				D874AC2F1640EB5A0085799C /* VertexArrayObject.h */,
 				D874AC301640EB5A0085799C /* VertexArrayObject.m */,
 				D874AC3B1641A30E0085799C /* VertexBuffer.h */,
@@ -557,6 +587,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D811DF5E16479EBB001EE707 /* Entity.m in Sources */,
+				D811DF5F16479EBB001EE707 /* EntityController.m in Sources */,
+				D811DF6016479EBB001EE707 /* MeshRenderer.m in Sources */,
+				D811DF4F16475796001EE707 /* Button.m in Sources */,
+				D811DF5016475796001EE707 /* SpriteController.m in Sources */,
 				D874AB821640D7140085799C /* main.m in Sources */,
 				D874AB891640D7140085799C /* AppDelegate.m in Sources */,
 				D874ABAA1640D7CC0085799C /* MacOpenGLView.m in Sources */,
@@ -597,6 +632,11 @@
 				D874AC4D1641A61B0085799C /* OpenGLES2Renderer.m in Sources */,
 				D874AC511641A66F0085799C /* EAGLView.m in Sources */,
 				D874AC571641E8150085799C /* OpenGLRenderer.m in Sources */,
+				D811DF4B16475282001EE707 /* Button.m in Sources */,
+				D811DF4E1647569C001EE707 /* SpriteController.m in Sources */,
+				D811DF5316475B6D001EE707 /* Entity.m in Sources */,
+				D811DF5A16479B25001EE707 /* MeshRenderer.m in Sources */,
+				D811DF5D16479D5B001EE707 /* EntityController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

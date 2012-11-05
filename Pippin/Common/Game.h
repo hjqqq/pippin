@@ -9,11 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @class Scene;
+@class SpriteController;
+@class EntityController;
 
 @interface Game : NSObject
 {
-	Scene *_scene;
 }
+
+@property (strong, nonatomic) SpriteController *spriteController;
+@property (strong, nonatomic) EntityController *entityController;
+@property (strong, nonatomic) Scene *scene;
 
 - (id)initWithViewportSize:(GLKVector2)size;
 

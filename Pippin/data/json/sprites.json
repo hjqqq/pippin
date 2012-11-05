@@ -1,0 +1,18 @@
+{
+	"sprites": [
+		{
+			"name": "grid",
+			"texture": "data/textures/grid_background.png",
+			"width": 16,
+			"height": 16,
+			"frames": 1,
+		},
+		{
+			"name": "button",
+			"texture": "data/textures/button.png",
+			"width": 64,
+			"height": 16,
+			"frames": 2,
+		}	
+	]
+}
