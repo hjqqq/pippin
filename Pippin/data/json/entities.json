@@ -2,11 +2,9 @@
 	"entities": [
 		{
 			"name": "button",
-			"sprite": "button",
-			"x": 100.0,
-			"y": 100.0,
-			"width": 100.0,
-			"height": 100.0,
+			"sprite": "button_idle",
+			"position": [ 100.0, 20.0 ],
+			"size": [ 64.0, 16.0 ]
 		}	
 	]
 }

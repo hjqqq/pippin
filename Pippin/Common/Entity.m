@@ -8,6 +8,8 @@
 
 #import "Entity.h"
 #import "MeshRenderer.h"
+#import "Sprite.h"
+#import "SpriteFrame.h"
 
 @implementation Entity
 
@@ -29,6 +31,8 @@
 		self.transform = GLKMatrix4Identity;
 		self.position = position;
 		self.size = size;
+		
+		[self.meshRenderer setTexCoordsMin:self.sprite.frame.texMins max:self.sprite.frame.texMaxs];
 	}
 	
 	return self;

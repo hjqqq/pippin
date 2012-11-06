@@ -71,6 +71,10 @@
 		D8A331AA163DFFDC00014E23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A3317D163DFFDB00014E23 /* Foundation.framework */; };
 		D8A331B2163DFFDC00014E23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8A331B0163DFFDC00014E23 /* InfoPlist.strings */; };
 		D8A331B5163DFFDC00014E23 /* PippinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A331B4163DFFDC00014E23 /* PippinTests.m */; };
+		D8DBBAF71648B03E00A4D2DB /* SpriteFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBAF61648B03E00A4D2DB /* SpriteFrame.m */; };
+		D8DBBAF81648B03E00A4D2DB /* SpriteFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBAF61648B03E00A4D2DB /* SpriteFrame.m */; };
+		D8DBBAFC1648C39D00A4D2DB /* TextureController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBAFB1648C39D00A4D2DB /* TextureController.m */; };
+		D8DBBAFD1648C39D00A4D2DB /* TextureController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBAFB1648C39D00A4D2DB /* TextureController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +175,10 @@
 		D8A331B1163DFFDC00014E23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D8A331B3163DFFDC00014E23 /* PippinTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PippinTests.h; sourceTree = "<group>"; };
 		D8A331B4163DFFDC00014E23 /* PippinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PippinTests.m; sourceTree = "<group>"; };
+		D8DBBAF51648B03E00A4D2DB /* SpriteFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpriteFrame.h; path = Common/SpriteFrame.h; sourceTree = "<group>"; };
+		D8DBBAF61648B03E00A4D2DB /* SpriteFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpriteFrame.m; path = Common/SpriteFrame.m; sourceTree = "<group>"; };
+		D8DBBAFA1648C39D00A4D2DB /* TextureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureController.h; path = Common/TextureController.h; sourceTree = "<group>"; };
+		D8DBBAFB1648C39D00A4D2DB /* TextureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextureController.m; path = Common/TextureController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +302,10 @@
 				D874AC3A1641A30E0085799C /* Sprite.m */,
 				D811DF4C1647569C001EE707 /* SpriteController.h */,
 				D811DF4D1647569C001EE707 /* SpriteController.m */,
+				D8DBBAF51648B03E00A4D2DB /* SpriteFrame.h */,
+				D8DBBAF61648B03E00A4D2DB /* SpriteFrame.m */,
+				D8DBBAFA1648C39D00A4D2DB /* TextureController.h */,
+				D8DBBAFB1648C39D00A4D2DB /* TextureController.m */,
 				D874AC2F1640EB5A0085799C /* VertexArrayObject.h */,
 				D874AC301640EB5A0085799C /* VertexArrayObject.m */,
 				D874AC3B1641A30E0085799C /* VertexBuffer.h */,
@@ -604,6 +616,8 @@
 				D874AC441641A30E0085799C /* Sprite.m in Sources */,
 				D874AC461641A30E0085799C /* VertexBuffer.m in Sources */,
 				D874AC581641E8150085799C /* OpenGLRenderer.m in Sources */,
+				D8DBBAF81648B03E00A4D2DB /* SpriteFrame.m in Sources */,
+				D8DBBAFD1648C39D00A4D2DB /* TextureController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +651,8 @@
 				D811DF5316475B6D001EE707 /* Entity.m in Sources */,
 				D811DF5A16479B25001EE707 /* MeshRenderer.m in Sources */,
 				D811DF5D16479D5B001EE707 /* EntityController.m in Sources */,
+				D8DBBAF71648B03E00A4D2DB /* SpriteFrame.m in Sources */,
+				D8DBBAFC1648C39D00A4D2DB /* TextureController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class Scene;
+@class TextureController;
 @class SpriteController;
 @class EntityController;
 
@@ -16,6 +17,7 @@
 {
 }
 
+@property (strong, nonatomic) TextureController *textureController;
 @property (strong, nonatomic) SpriteController *spriteController;
 @property (strong, nonatomic) EntityController *entityController;
 @property (strong, nonatomic) Scene *scene;

@@ -9,11 +9,13 @@
 #import "Game.h"
 #import "Scene.h"
 #import "Sprite.h"
+#import "TextureController.h"
 #import "SpriteController.h"
 #import "EntityController.h"
 
 @implementation Game
 
+@synthesize textureController;
 @synthesize spriteController;
 @synthesize entityController;
 @synthesize scene;
@@ -24,7 +26,8 @@
 	if( self != nil )
 	{
 		Color bgColor = ColorMake( 0.0f, 0.0f, 0.0f, 1.0f );
-		self.spriteController = [[SpriteController alloc] initWithContentsOfFile:@"data/json/sprites.json"];
+		self.textureController = [[TextureController alloc] init];
+		self.spriteController = [[SpriteController alloc] initWithContentsOfFile:@"data/json/sprites.json" textureController:self.textureController];
 		self.entityController = [[EntityController alloc] initWithContentsOfFile:@"data/json/entities.json" spriteController:self.spriteController];
 		self.scene = [[Scene alloc] initWithViewportSize:size backgroundColor:bgColor];
 		

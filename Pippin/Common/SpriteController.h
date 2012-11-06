@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @class Sprite;
+@class TextureController;
 
 @interface SpriteController : NSObject
 {
 }
 
-- (id)initWithContentsOfFile:(NSString *)path;
+- (id)initWithContentsOfFile:(NSString *)path textureController:(TextureController *)textureController;
 
 - (Sprite *)spriteNamed:(NSString *)name;
 

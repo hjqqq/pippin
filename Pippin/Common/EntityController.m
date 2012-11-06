@@ -59,7 +59,7 @@
 		
 			NSString *name = [entityDict objectForKey:@"name"];
 			GLKVector3 position = [self parsePosition:entityDict];
-			GLKVector3 size = [self parsePosition:entityDict];
+			GLKVector3 size = [self parseSize:entityDict];
 			
 			Entity *entity = [[Entity alloc] initWithName:name sprite:sprite position:position size:size];
 			[_entities setObject:entity forKey:entity.name];
@@ -80,10 +80,20 @@
 {
 	GLKVector3 position = GLKVector3Make( 0.0f, 0.0f, 0.0f );
 	
-	NSNumber *number = nil;
-	if( ( number = [dict objectForKey:@"x"] ) != nil ) { position.x = [number floatValue]; }
-	if( ( number = [dict objectForKey:@"y"] ) != nil ) { position.y = [number floatValue]; }
-	if( ( number = [dict objectForKey:@"z"] ) != nil ) { position.z = [number floatValue]; }
+	NSArray *positionArray = [dict objectForKey:@"position"];
+	if( positionArray != nil )
+	{
+		position.x = [[positionArray objectAtIndex:0] floatValue];
+		position.y = [[positionArray objectAtIndex:1] floatValue];
+		if( [positionArray count] > 2 ) { position.z = [[positionArray objectAtIndex:2] floatValue]; }
+	}
+	else
+	{
+		NSNumber *number = nil;
+		if( ( number = [dict objectForKey:@"x"] ) != nil ) { position.x = [number floatValue]; }
+		if( ( number = [dict objectForKey:@"y"] ) != nil ) { position.y = [number floatValue]; }
+		if( ( number = [dict objectForKey:@"z"] ) != nil ) { position.z = [number floatValue]; }
+	}
 	
 	return position;
 }
@@ -92,9 +102,18 @@
 {
 	GLKVector3 size = GLKVector3Make( 0.0f, 0.0f, 1.0f );
 	
-	NSNumber *number = nil;
-	if( ( number = [dict objectForKey:@"width"] ) != nil ) { size.x = [number floatValue]; }
-	if( ( number = [dict objectForKey:@"height"] ) != nil ) { size.y = [number floatValue]; }
+	NSArray *sizeArray = [dict objectForKey:@"size"];
+	if( sizeArray != nil )
+	{
+		size.x = [[sizeArray objectAtIndex:0] floatValue];
+		size.y = [[sizeArray objectAtIndex:1] floatValue];
+	}
+	else
+	{
+		NSNumber *number = nil;
+		if( ( number = [dict objectForKey:@"width"] ) != nil ) { size.x = [number floatValue]; }
+		if( ( number = [dict objectForKey:@"height"] ) != nil ) { size.y = [number floatValue]; }
+	}
 	
 	return size;
 }

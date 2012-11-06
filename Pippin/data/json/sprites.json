@@ -3,16 +3,22 @@
 		{
 			"name": "grid",
 			"texture": "data/textures/grid_background.png",
-			"width": 16,
-			"height": 16,
+			"size": [ 16, 16 ],
 			"frames": 1,
 		},
 		{
-			"name": "button",
+			"name": "button_idle",
 			"texture": "data/textures/button.png",
-			"width": 64,
-			"height": 16,
-			"frames": 2,
-		}	
+			"size": [ 64, 16 ],
+			"texMins": [ 0.0, 0.0 ],
+			"texMaxs": [ 1.0, 0.5 ]
+		},
+		{
+			"name": "button_pressed",
+			"texture": "data/textures/button.png",
+			"size": [ 64, 16 ],
+			"texMins": [ 0.0, 0.5 ],
+			"texMaxs": [ 1.0, 1.0 ],
+		}
 	]
 }
