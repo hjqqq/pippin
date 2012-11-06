@@ -15,6 +15,7 @@
 
 @property (readonly) GLKMatrix4 projectionMatrix;
 @property (nonatomic) GLKVector2 size;
+@property (nonatomic) GLKVector3 scale;
 
 - (id)initWithViewportWidth:(float)width height:(float)height;
 

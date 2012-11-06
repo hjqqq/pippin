@@ -12,6 +12,7 @@
 
 @synthesize projectionMatrix;
 @synthesize size = _size;
+@synthesize scale = _scale;
 
 - (id)initWithViewportWidth:(float)width height:(float)height;
 {
@@ -19,6 +20,7 @@
 	if( self != nil )
 	{
 		_size = GLKVector2Make( width, height );
+		_scale = GLKVector3Make( 1.0f, 1.0f, 1.0f );
 		_projectionMatrix = GLKMatrix4MakeOrtho( 0.0f, _size.x, 0.0f, _size.y, 1.0f, -1.0f );
 	}
 	
@@ -36,6 +38,16 @@
 	{
 		_size = aSize;
 		_projectionMatrix = GLKMatrix4MakeOrtho( 0.0f, _size.x, 0.0f, _size.y, 1.0f, -1.0f );
+		_projectionMatrix = GLKMatrix4ScaleWithVector3( _projectionMatrix, _scale );
+	}
+}
+
+- (void)setScale:(GLKVector3)aScale;
+{
+	if( !GLKVector3AllEqualToVector3( _scale, aScale ) )
+	{
+		_scale = aScale;
+		_projectionMatrix = GLKMatrix4ScaleWithVector3( _projectionMatrix, _scale );
 	}
 }
 

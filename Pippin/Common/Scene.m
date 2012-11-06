@@ -20,6 +20,7 @@
 	if( self != nil )
 	{
 		_camera = [[Camera alloc] initWithViewportWidth:size.x height:size.y];
+		_camera.scale = GLKVector3Make( 2.0f, 2.0f, 1.0f );
 		_entities = [[NSMutableArray alloc] init];
 		self.bgColor = backgroundColor;
 	}
