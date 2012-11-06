@@ -8,6 +8,8 @@
 
 #import "TextureController.h"
 
+static TextureController *_sharedController;
+
 @interface TextureController ()
 {
 	NSMutableDictionary *_textures;
@@ -16,6 +18,16 @@
 @end
 
 @implementation TextureController
+
++ (TextureController *)sharedController;
+{
+	if( _sharedController == nil )
+	{
+		_sharedController = [[TextureController alloc] init];
+	}
+	
+	return _sharedController;
+}
 
 - (id)init;
 {

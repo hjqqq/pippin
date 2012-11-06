@@ -10,20 +10,31 @@
 #import "SpriteController.h"
 #import "Sprite.h"
 #import "Entity.h"
+#import "Parser.h"
+
+static EntityController *_sharedController;
 
 @interface EntityController ()
 {
 	NSMutableDictionary *_entities;
 }
 
-- (GLKVector3)parsePosition:(NSDictionary *)dict;
-- (GLKVector3)parseSize:(NSDictionary *)dict;
-
 @end
 
 @implementation EntityController
 
-- (id)initWithContentsOfFile:(NSString *)path spriteController:(SpriteController *)spriteController;
++ (EntityController *)sharedController
+{
+	return _sharedController;
+}
+
++ (id)initSharedControllerWithContentsOfFile:(NSString *)path;
+{
+	_sharedController = [[EntityController alloc] initWithContentsOfFile:path];
+	return _sharedController;
+}
+
+- (id)initWithContentsOfFile:(NSString *)path;
 {
 	self = [super init];
 	if( self != nil )
@@ -46,11 +57,11 @@
 			// Error, expecting a dictionary with the key "entities"
 		}
 		
-		NSLog( @"EntityController: Loading %du entities...\n", [entitiesArray count] );
+		NSLog( @"EntityController: Loading %d entities...\n", (int)[entitiesArray count] );
 		for( id entityDict in entitiesArray )
 		{
 			NSString *spriteName = [entityDict objectForKey:@"sprite"];
-			Sprite *sprite = [spriteController spriteNamed:spriteName];
+			Sprite *sprite = [[SpriteController sharedController] spriteNamed:spriteName];
 			if( sprite == nil )
 			{
 				// Error, expecting sprite
@@ -58,8 +69,8 @@
 			}
 		
 			NSString *name = [entityDict objectForKey:@"name"];
-			GLKVector3 position = [self parsePosition:entityDict];
-			GLKVector3 size = [self parseSize:entityDict];
+			GLKVector3 position = [Parser parsePosition:entityDict];
+			GLKVector3 size = [Parser parseVec3Size:entityDict];
 			
 			Entity *entity = [[Entity alloc] initWithName:name sprite:sprite position:position size:size];
 			[_entities setObject:entity forKey:entity.name];
@@ -74,48 +85,6 @@
 - (Entity *)entityNamed:(NSString *)name;
 {
 	return [_entities objectForKey:name];
-}
-
-- (GLKVector3)parsePosition:(NSDictionary *)dict;
-{
-	GLKVector3 position = GLKVector3Make( 0.0f, 0.0f, 0.0f );
-	
-	NSArray *positionArray = [dict objectForKey:@"position"];
-	if( positionArray != nil )
-	{
-		position.x = [[positionArray objectAtIndex:0] floatValue];
-		position.y = [[positionArray objectAtIndex:1] floatValue];
-		if( [positionArray count] > 2 ) { position.z = [[positionArray objectAtIndex:2] floatValue]; }
-	}
-	else
-	{
-		NSNumber *number = nil;
-		if( ( number = [dict objectForKey:@"x"] ) != nil ) { position.x = [number floatValue]; }
-		if( ( number = [dict objectForKey:@"y"] ) != nil ) { position.y = [number floatValue]; }
-		if( ( number = [dict objectForKey:@"z"] ) != nil ) { position.z = [number floatValue]; }
-	}
-	
-	return position;
-}
-
-- (GLKVector3)parseSize:(NSDictionary *)dict;
-{
-	GLKVector3 size = GLKVector3Make( 0.0f, 0.0f, 1.0f );
-	
-	NSArray *sizeArray = [dict objectForKey:@"size"];
-	if( sizeArray != nil )
-	{
-		size.x = [[sizeArray objectAtIndex:0] floatValue];
-		size.y = [[sizeArray objectAtIndex:1] floatValue];
-	}
-	else
-	{
-		NSNumber *number = nil;
-		if( ( number = [dict objectForKey:@"width"] ) != nil ) { size.x = [number floatValue]; }
-		if( ( number = [dict objectForKey:@"height"] ) != nil ) { size.y = [number floatValue]; }
-	}
-	
-	return size;
 }
 
 @end

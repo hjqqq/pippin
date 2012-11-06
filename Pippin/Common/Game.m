@@ -15,9 +15,6 @@
 
 @implementation Game
 
-@synthesize textureController;
-@synthesize spriteController;
-@synthesize entityController;
 @synthesize scene;
 
 - (id)initWithViewportSize:(GLKVector2)size;
@@ -25,13 +22,13 @@
 	self = [super init];
 	if( self != nil )
 	{
+		[SpriteController initSharedControllerWithContentsOfFile:@"data/json/sprites.json"];
+		[EntityController initSharedControllerWithContentsOfFile:@"data/json/entities.json"];
+		
 		Color bgColor = ColorMake( 0.0f, 0.0f, 0.0f, 1.0f );
-		self.textureController = [[TextureController alloc] init];
-		self.spriteController = [[SpriteController alloc] initWithContentsOfFile:@"data/json/sprites.json" textureController:self.textureController];
-		self.entityController = [[EntityController alloc] initWithContentsOfFile:@"data/json/entities.json" spriteController:self.spriteController];
 		self.scene = [[Scene alloc] initWithViewportSize:size backgroundColor:bgColor];
 		
-		[self.scene addEntity:[self.entityController entityNamed:@"button"]];
+		[self.scene addEntity:[[EntityController sharedController] entityNamed:@"button"]];
 	}
 	
 	return self;

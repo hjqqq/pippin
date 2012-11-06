@@ -12,6 +12,8 @@
 {
 }
 
++ (TextureController *)sharedController;
+
 - (GLKTextureInfo *)textureNamed:(NSString *)name;
 
 @end

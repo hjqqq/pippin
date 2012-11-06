@@ -10,6 +10,7 @@
 #import "MeshRenderer.h"
 #import "Sprite.h"
 #import "SpriteFrame.h"
+#import "Parser.h"
 
 @implementation Entity
 
@@ -19,6 +20,20 @@
 @synthesize transform;
 @synthesize meshRenderer;
 @synthesize sprite;
+
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+{
+	self = [super init];
+	if( self != nil )
+	{
+		self.name = [dictionary objectForKey:@"sprite"];
+		self.position = [Parser parsePosition:dictionary];
+		self.size = [Parser parseVec3Size:dictionary];
+		self.sprite = [Parser parseSprite:dictionary];
+	}
+	
+	return self;
+}
 
 - (id)initWithName:(NSString *)aName sprite:(Sprite *)aSprite position:(GLKVector3)position size:(GLKVector3)size;
 {

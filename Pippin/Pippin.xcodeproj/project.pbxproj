@@ -75,6 +75,8 @@
 		D8DBBAF81648B03E00A4D2DB /* SpriteFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBAF61648B03E00A4D2DB /* SpriteFrame.m */; };
 		D8DBBAFC1648C39D00A4D2DB /* TextureController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBAFB1648C39D00A4D2DB /* TextureController.m */; };
 		D8DBBAFD1648C39D00A4D2DB /* TextureController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBAFB1648C39D00A4D2DB /* TextureController.m */; };
+		D8DBBB001648E40400A4D2DB /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBAFF1648E40400A4D2DB /* Parser.m */; };
+		D8DBBB011648E40400A4D2DB /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBAFF1648E40400A4D2DB /* Parser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +181,8 @@
 		D8DBBAF61648B03E00A4D2DB /* SpriteFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpriteFrame.m; path = Common/SpriteFrame.m; sourceTree = "<group>"; };
 		D8DBBAFA1648C39D00A4D2DB /* TextureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureController.h; path = Common/TextureController.h; sourceTree = "<group>"; };
 		D8DBBAFB1648C39D00A4D2DB /* TextureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextureController.m; path = Common/TextureController.m; sourceTree = "<group>"; };
+		D8DBBAFE1648E40300A4D2DB /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Parser.h; path = Common/Parser.h; sourceTree = "<group>"; };
+		D8DBBAFF1648E40400A4D2DB /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Parser.m; path = Common/Parser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +300,8 @@
 				D811DF5916479B24001EE707 /* MeshRenderer.m */,
 				D874AC551641E8110085799C /* OpenGLRenderer.h */,
 				D874AC561641E8120085799C /* OpenGLRenderer.m */,
+				D8DBBAFE1648E40300A4D2DB /* Parser.h */,
+				D8DBBAFF1648E40400A4D2DB /* Parser.m */,
 				D874AC371641A30D0085799C /* Scene.h */,
 				D874AC381641A30D0085799C /* Scene.m */,
 				D874AC391641A30E0085799C /* Sprite.h */,
@@ -618,6 +624,7 @@
 				D874AC581641E8150085799C /* OpenGLRenderer.m in Sources */,
 				D8DBBAF81648B03E00A4D2DB /* SpriteFrame.m in Sources */,
 				D8DBBAFD1648C39D00A4D2DB /* TextureController.m in Sources */,
+				D8DBBB011648E40400A4D2DB /* Parser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +660,7 @@
 				D811DF5D16479D5B001EE707 /* EntityController.m in Sources */,
 				D8DBBAF71648B03E00A4D2DB /* SpriteFrame.m in Sources */,
 				D8DBBAFC1648C39D00A4D2DB /* TextureController.m in Sources */,
+				D8DBBB001648E40400A4D2DB /* Parser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

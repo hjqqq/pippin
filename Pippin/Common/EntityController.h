@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @class Entity;
-@class SpriteController;
 
 @interface EntityController : NSObject
 {
 }
 
-- (id)initWithContentsOfFile:(NSString *)path spriteController:(SpriteController *)spriteController;
++ (EntityController *)sharedController;
++ (id)initSharedControllerWithContentsOfFile:(NSString *)path;
+
+- (id)initWithContentsOfFile:(NSString *)path;
 
 - (Entity *)entityNamed:(NSString *)name;
 

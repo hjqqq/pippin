@@ -9,22 +9,31 @@
 #import "SpriteController.h"
 #import "TextureController.h"
 #import "Sprite.h"
+#import "Parser.h"
+
+static SpriteController *_sharedController;
 
 @interface SpriteController ()
 {
 	NSMutableDictionary *_sprites;
 }
 
-- (GLKVector2)parseSize:(NSDictionary *)dict;
-- (GLKVector2)parseTexMins:(NSDictionary *)dict;
-- (GLKVector2)parseTexMaxs:(NSDictionary *)dict;
-- (unsigned int)parseNumFrames:(NSDictionary *)dict;
-
 @end
 
 @implementation SpriteController
 
-- (id)initWithContentsOfFile:(NSString *)path textureController:(TextureController *)textureController;
++ (SpriteController *)sharedController
+{
+	return _sharedController;
+}
+
++ (id)initSharedControllerWithContentsOfFile:(NSString *)path;
+{
+	_sharedController = [[SpriteController alloc] initWithContentsOfFile:path];
+	return _sharedController;
+}
+
+- (id)initWithContentsOfFile:(NSString *)path;
 {
 	self = [super init];
 	if( self != nil )
@@ -47,29 +56,29 @@
 			// Error, expecting a dictionary with the key "sprites"
 		}
 		
-		NSLog( @"SpriteController: Loading %du sprites...\n", [spritesArray count] );
+		NSLog( @"SpriteController: Loading %d sprites...\n", (int)[spritesArray count] );
 		for( id spriteDict in spritesArray )
 		{
 			Sprite *sprite;
 			NSString *name = [spriteDict objectForKey:@"name"];
-			GLKVector2 size = [self parseSize:spriteDict];
+			GLKVector2 size = [Parser parseVec2Size:spriteDict];
 			
 			NSString *texturePath = [spriteDict objectForKey:@"texture"];
-			GLKTextureInfo *texture = [textureController textureNamed:texturePath];
+			GLKTextureInfo *texture = [[TextureController sharedController] textureNamed:texturePath];
 			if( texture == nil )
 			{
 				// Error, no texture found
 			}
 			
-			unsigned int numFrames = [self parseNumFrames:spriteDict];
+			unsigned int numFrames = [Parser parseNumFrames:spriteDict];
 			if( numFrames > 1 )
 			{
 				sprite = [[Sprite alloc] initWithName:name texture:texture size:size numFrames:numFrames];
 			}
 			else
 			{
-				GLKVector2 texMins = [self parseTexMins:spriteDict];
-				GLKVector2 texMaxs = [self parseTexMaxs:spriteDict];
+				GLKVector2 texMins = [Parser parseTexMins:spriteDict];
+				GLKVector2 texMaxs = [Parser parseTexMaxs:spriteDict];
 				sprite = [[Sprite alloc] initWithName:name texture:texture size:size texMins:texMins texMaxs:texMaxs];
 			}
 			[_sprites setObject:sprite forKey:sprite.name];
@@ -84,64 +93,6 @@
 - (Sprite *)spriteNamed:(NSString *)name;
 {
 	return [_sprites objectForKey:name];
-}
-
-- (GLKVector2)parseSize:(NSDictionary *)dict;
-{
-	GLKVector2 size = GLKVector2Make( 0.0f, 0.0f );
-	
-	NSArray *sizeArray = [dict objectForKey:@"size"];
-	if( sizeArray != nil )
-	{
-		size.x = [[sizeArray objectAtIndex:0] floatValue];
-		size.y = [[sizeArray objectAtIndex:1] floatValue];
-	}
-	else
-	{
-		NSNumber *number = nil;
-		if( ( number = [dict objectForKey:@"width"] ) != nil ) { size.x = [number floatValue]; }
-		if( ( number = [dict objectForKey:@"height"] ) != nil ) { size.y = [number floatValue]; }
-	}
-	
-	return size;
-}
-
-- (GLKVector2)parseTexMins:(NSDictionary *)dict;
-{
-	GLKVector2 texMins = GLKVector2Make( 0.0f, 0.0f );
-	
-	NSArray *texMinsArray = [dict objectForKey:@"texMins"];
-	if( texMinsArray != nil )
-	{
-		texMins.x = [[texMinsArray objectAtIndex:0] floatValue];
-		texMins.y = [[texMinsArray objectAtIndex:1] floatValue];
-	}
-	
-	return texMins;
-}
-
-- (GLKVector2)parseTexMaxs:(NSDictionary *)dict;
-{
-	GLKVector2 texMaxs = GLKVector2Make( 1.0f, 1.0f );
-	
-	NSArray *texMaxsArray = [dict objectForKey:@"texMaxs"];
-	if( texMaxsArray != nil )
-	{
-		texMaxs.x = [[texMaxsArray objectAtIndex:0] floatValue];
-		texMaxs.y = [[texMaxsArray objectAtIndex:1] floatValue];
-	}
-
-	return texMaxs;
-}
-
-- (unsigned int)parseNumFrames:(NSDictionary *)dict;
-{
-	int numFrames = 1;
-	
-	NSNumber *number = nil;
-	if( ( number = [dict objectForKey:@"frames"] ) != nil ) { numFrames = [number unsignedIntValue]; }
-	
-	return numFrames;
 }
 
 @end
