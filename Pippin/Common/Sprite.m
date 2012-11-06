@@ -18,7 +18,7 @@
 	self = [super init];
 	if( self != nil )
 	{
-		self.name = name;
+		self.name = aName;
 	
 		NSError *error;
 		NSString *path = [[NSBundle mainBundle] pathForResource:texturePath ofType:nil];

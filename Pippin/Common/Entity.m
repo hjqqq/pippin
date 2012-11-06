@@ -23,9 +23,9 @@
 	self = [super init];
 	if( self != nil )
 	{
-		self.name = name;
+		self.name = aName;
 		self.meshRenderer = [[MeshRenderer alloc] init];
-		self.sprite = sprite;
+		self.sprite = aSprite;
 		self.transform = GLKMatrix4Identity;
 		self.position = position;
 		self.size = size;
