@@ -18,6 +18,7 @@
 }
 
 @property (nonatomic) Color bgColor;
+@property (readonly) NSArray *entities;
 
 - (id)initWithViewportSize:(GLKVector2)size backgroundColor:(Color)backgroundColor;
 

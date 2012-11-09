@@ -28,6 +28,11 @@
 	return self;
 }
 
+- (NSArray *)entities;
+{
+	return _entities;
+}
+
 - (void)viewportSizeChanged:(GLKVector2)size;
 {
 	_camera.size = size;

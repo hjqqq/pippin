@@ -61,7 +61,7 @@
 	}
 }
 
-- (void) layoutSubviews
+- (void)layoutSubviews
 {
 	[_renderer resizeFromLayer:(CAEAGLLayer*)self.layer];
 	[self drawView:nil];
@@ -71,6 +71,26 @@
 {
 	[EAGLContext setCurrentContext:_context];
 	[_renderer render];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+	[_renderer touchesBegan:touches withEvent:event];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+	[_renderer touchesCancelled:touches withEvent:event];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+	[_renderer touchesEnded:touches withEvent:event];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+	[_renderer touchesMoved:touches withEvent:event];
 }
 
 @end

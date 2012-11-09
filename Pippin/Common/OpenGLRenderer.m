@@ -59,4 +59,24 @@
 	[_game viewportSizeChanged:GLKVector2Make( width, height )];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+	[_game touchesBegan:touches withEvent:event];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+	[_game touchesCancelled:touches withEvent:event];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+	[_game touchesEnded:touches withEvent:event];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+	[_game touchesMoved:touches withEvent:event];
+}
+
 @end

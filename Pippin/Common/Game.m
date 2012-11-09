@@ -45,4 +45,33 @@
 	[self.scene viewportSizeChanged:size];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+	for( UITouch *touch in touches )
+	{
+		CGPoint location = [touch locationInView: [touch view]];
+		NSLog( @"touch: %f %f\n", location.x, location.y );
+	
+		for( Entity *entity in self.scene.entities )
+		{
+			
+		}
+	}
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+	
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+	
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
+{
+	
+}
+
 @end
