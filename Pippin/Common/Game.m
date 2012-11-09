@@ -9,6 +9,7 @@
 #import "Game.h"
 #import "Scene.h"
 #import "Sprite.h"
+#import "Entity.h"
 #import "TextureController.h"
 #import "SpriteController.h"
 #import "EntityController.h"
@@ -50,11 +51,14 @@
 	for( UITouch *touch in touches )
 	{
 		CGPoint location = [touch locationInView: [touch view]];
-		NSLog( @"touch: %f %f\n", location.x, location.y );
+		location.y = [touch view].bounds.size.height - location.y;
 	
 		for( Entity *entity in self.scene.entities )
 		{
-			
+			if( CGRectContainsPoint( entity.bounds, location ) )
+			{
+				// Hit
+			}
 		}
 	}
 }

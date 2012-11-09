@@ -12,12 +12,19 @@
 #import "SpriteFrame.h"
 #import "Parser.h"
 
+@interface Entity ()
+
+- (void)updateBounds;
+
+@end
+
 @implementation Entity
 
 @synthesize name;
 @synthesize position = _position;
 @synthesize size = _size;
 @synthesize transform;
+@synthesize bounds = _bounds;
 @synthesize meshRenderer;
 @synthesize sprite;
 
@@ -58,8 +65,8 @@
 	if( !GLKVector3AllEqualToVector3( _position, position_ ) )
 	{
 		_position = position_;
-		
 		self.transform = GLKMatrix4TranslateWithVector3( self.transform, _position );
+		[self updateBounds];
 	}
 }
 
@@ -68,14 +75,20 @@
 	if( !GLKVector3AllEqualToVector3( _size, size_ ) )
 	{
 		_size = size_;
-		
 		self.transform = GLKMatrix4ScaleWithVector3( self.transform, _size );
+		[self updateBounds];
 	}
 }
 
 - (void)renderWithCamera:(Camera *)camera;
 {
 	[self.meshRenderer renderWithCamera:camera modelViewMatrix:self.transform sprite:self.sprite];
+}
+
+- (void)updateBounds;
+{
+	_bounds.origin = CGPointMake( self.position.x, self.position.y );
+	_bounds.size = CGSizeMake( self.size.x, self.size.y );
 }
 
 @end

@@ -20,6 +20,7 @@
 @property (nonatomic) GLKVector3 position;
 @property (nonatomic) GLKVector3 size;
 @property (nonatomic) GLKMatrix4 transform;
+@property (nonatomic) CGRect bounds;
 @property (strong, nonatomic) MeshRenderer *meshRenderer;
 @property (strong, nonatomic) Sprite *sprite;
 
