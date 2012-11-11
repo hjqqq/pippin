@@ -7,15 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Entity.h"
 
 @class Sprite;
 
-@interface Button : NSObject
+@interface Button : Entity
 {
 }
 
-@property (nonatomic, retain) Sprite *sprite;
+@property (strong, nonatomic) Sprite *idleSprite;
+@property (strong, nonatomic) Sprite *pressedSprite;
+@property (strong, nonatomic) MeshRenderer *meshRenderer;
 
+- (id)initWithDictionary:(NSDictionary *)dict;
 
+- (void)renderWithCamera:(Camera *)camera;
 
 @end

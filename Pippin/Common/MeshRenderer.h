@@ -18,14 +18,16 @@
 {
 	GLKBaseEffect *_effect;
 	GLfloat _vertexData[ 20 ];
+	Sprite *_sprite;
 }
 
 @property (strong, nonatomic) VertexArrayObject *vertexArrayObject;
 @property (strong, nonatomic) VertexBuffer *vertexBuffer;
 @property (strong, nonatomic) IndexBuffer *indexBuffer;
+@property (strong, nonatomic) Sprite *sprite;
 
 - (void)setTexCoordsMin:(GLKVector2)min max:(GLKVector2)max;
 
-- (void)renderWithCamera:(Camera *)camera modelViewMatrix:(GLKMatrix4)modelViewMatrix sprite:(Sprite *)sprite;
+- (void)renderWithCamera:(Camera *)camera modelViewMatrix:(GLKMatrix4)modelViewMatrix;
 
 @end

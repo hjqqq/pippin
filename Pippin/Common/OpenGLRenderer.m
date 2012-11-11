@@ -59,6 +59,7 @@
 	[_game viewportSizeChanged:GLKVector2Make( width, height )];
 }
 
+/*
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 {
 	[_game touchesBegan:touches withEvent:event];
@@ -78,5 +79,6 @@
 {
 	[_game touchesMoved:touches withEvent:event];
 }
+*/
 
 @end

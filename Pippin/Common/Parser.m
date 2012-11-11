@@ -102,9 +102,9 @@
 	return texMaxs;
 }
 
-+ (Sprite *)parseSprite:(NSDictionary *)dict;
++ (Sprite *)parseSprite:(NSDictionary *)dict forKey:(NSString *)key;
 {
-	NSString *spriteName = [dict objectForKey:@"sprite"];
+	NSString *spriteName = [dict objectForKey:key];
 	return [[SpriteController sharedController] spriteNamed:spriteName];
 }
 

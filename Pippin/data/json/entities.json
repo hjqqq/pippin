@@ -5,7 +5,8 @@
 			"type": "Button",
 			"position": [ 1.0, 0.0 ],
 			"size": [ 64.0, 16.0 ],
-			"sprite": "button_idle",
+			"idleSprite": "button_idle",
+			"pressedSprite": "button_pressed",
 		}
 	]
 }

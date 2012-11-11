@@ -19,7 +19,7 @@
 + (GLKVector3)parseVec3Size:(NSDictionary *)dict;
 + (GLKVector2)parseTexMins:(NSDictionary *)dict;
 + (GLKVector2)parseTexMaxs:(NSDictionary *)dict;
-+ (Sprite *)parseSprite:(NSDictionary *)dict;
++ (Sprite *)parseSprite:(NSDictionary *)dict forKey:(NSString *)key;
 + (unsigned int)parseNumFrames:(NSDictionary *)dict;
 
 @end

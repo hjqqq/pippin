@@ -40,6 +40,8 @@ static TextureController *_sharedController;
 	return self;
 }
 
+#import <OpenGL/gl.h>
+
 - (GLKTextureInfo *)textureNamed:(NSString *)name;
 {
 	GLKTextureInfo *texture = [_textures objectForKey:name];

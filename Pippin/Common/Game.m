@@ -46,6 +46,7 @@
 	[self.scene viewportSizeChanged:size];
 }
 
+/*
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 {
 	for( UITouch *touch in touches )
@@ -77,5 +78,6 @@
 {
 	
 }
+*/
 
 @end

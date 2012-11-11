@@ -12,12 +12,14 @@
 #import "IndexBuffer.h"
 #import "Camera.h"
 #import "Sprite.h"
+#import "SpriteFrame.h"
 
 @implementation MeshRenderer
 
 @synthesize vertexArrayObject;
 @synthesize vertexBuffer;
 @synthesize indexBuffer;
+@synthesize sprite = _sprite;
 
 GLfloat gVertexData[ 20 ] =
 {
@@ -47,6 +49,15 @@ unsigned short gIndexData[ 4 ] =
 	return self;
 }
 
+- (void)setSprite:(Sprite *)sprite;
+{
+	if( sprite != _sprite )
+	{
+		_sprite = sprite;
+		[self setTexCoordsMin:sprite.frame.texMins max:sprite.frame.texMaxs];
+	}
+}
+
 - (void)setTexCoordsMin:(GLKVector2)min max:(GLKVector2)max;
 {
 	_vertexData[ 3 ] = min.x;
@@ -62,25 +73,26 @@ unsigned short gIndexData[ 4 ] =
 	[self.vertexBuffer update:_vertexData size:sizeof( _vertexData )];
 }
 
-- (void)renderWithCamera:(Camera *)camera modelViewMatrix:(GLKMatrix4)modelViewMatrix sprite:(Sprite *)sprite;
+- (void)renderWithCamera:(Camera *)camera modelViewMatrix:(GLKMatrix4)modelViewMatrix;
 {
-	[self.vertexArrayObject bind];
+	if( self.sprite != nil )
+	{
+		[self.vertexArrayObject bind];
 
-	_effect.texture2d0.name = sprite.texture.name;
-	_effect.texture2d0.enabled = YES;
-	_effect.transform.modelviewMatrix = modelViewMatrix;
-	_effect.transform.projectionMatrix = camera.projectionMatrix;
-	[_effect prepareToDraw];
-	
-	glEnable( GL_TEXTURE_2D );
-	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT );
-	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT );
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		_effect.texture2d0.name = self.sprite.texture.name;
+		_effect.texture2d0.enabled = YES;
+		_effect.transform.modelviewMatrix = modelViewMatrix;
+		_effect.transform.projectionMatrix = camera.projectionMatrix;
+		[_effect prepareToDraw];
+		
+		glEnable( GL_TEXTURE_2D );
+		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST );
+		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST );
 
-	glDrawElements( GL_TRIANGLE_STRIP, 4, GL_UNSIGNED_SHORT, 0 );
+		glDrawElements( GL_TRIANGLE_STRIP, 4, GL_UNSIGNED_SHORT, 0 );
 
-	[self.vertexArrayObject unbind];
+		[self.vertexArrayObject unbind];
+	}
 }
 
 @end

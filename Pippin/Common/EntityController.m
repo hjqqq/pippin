@@ -60,19 +60,14 @@ static EntityController *_sharedController;
 		NSLog( @"EntityController: Loading %d entities...\n", (int)[entitiesArray count] );
 		for( id entityDict in entitiesArray )
 		{
-			NSString *spriteName = [entityDict objectForKey:@"sprite"];
-			Sprite *sprite = [[SpriteController sharedController] spriteNamed:spriteName];
-			if( sprite == nil )
+			NSString *type = [entityDict objectForKey:@"type"];
+			if( type == nil )
 			{
-				// Error, expecting sprite
-				continue;
+				// Error, require a type
 			}
-		
-			NSString *name = [entityDict objectForKey:@"name"];
-			GLKVector3 position = [Parser parsePosition:entityDict];
-			GLKVector3 size = [Parser parseVec3Size:entityDict];
 			
-			Entity *entity = [[Entity alloc] initWithName:name sprite:sprite position:position size:size];
+			Class entityClass = NSClassFromString( type );
+			Entity *entity = [[entityClass alloc] initWithDictionary:entityDict];
 			[_entities setObject:entity forKey:entity.name];
 			
 			NSLog( @"...%@\n", entity.name );

@@ -8,6 +8,7 @@
 
 #import "MacOpenGLView.h"
 #import "OpenGLRenderer.h"
+#import "InputController.h"
 
 @interface MacOpenGLView ()
 {
@@ -123,5 +124,42 @@ static CVReturn OnDisplayLink( CVDisplayLinkRef displayLink, const CVTimeStamp *
 	CGLUnlockContext( [[self openGLContext] CGLContextObj] );
 }
 
+#pragma mark NSResponder Methods
+
+- (void)mouseDown:(NSEvent *)theEvent;
+{
+	CGPoint location = [theEvent locationInWindow];
+	[[InputController sharedController] mouseDown:GLKVector2Make( location.x, location.y )];
+}
+
+- (void)mouseUp:(NSEvent *)theEvent;
+{
+	CGPoint location = [theEvent locationInWindow];
+	[[InputController sharedController] mouseUp:GLKVector2Make( location.x, location.y )];
+}
+
+- (void)mouseMoved:(NSEvent *)theEvent;
+{
+	CGPoint location = [theEvent locationInWindow];
+	[[InputController sharedController] mouseMoved:GLKVector2Make( location.x, location.y )];
+}
+
+- (void)mouseDragged:(NSEvent *)theEvent;
+{
+	CGPoint location = [theEvent locationInWindow];
+	[[InputController sharedController] mouseMoved:GLKVector2Make( location.x, location.y )];
+}
+
+- (void)keyDown:(NSEvent *)theEvent;
+{
+}
+
+- (void)keyUp:(NSEvent *)theEvent;
+{
+}
+
+- (void)flagsChanged:(NSEvent *)theEvent;
+{
+}
 
 @end

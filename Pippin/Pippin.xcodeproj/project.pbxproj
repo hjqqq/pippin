@@ -54,6 +54,7 @@
 		D874AC531641A9050085799C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D874AC521641A9050085799C /* QuartzCore.framework */; };
 		D874AC571641E8150085799C /* OpenGLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC561641E8120085799C /* OpenGLRenderer.m */; };
 		D874AC581641E8150085799C /* OpenGLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC561641E8120085799C /* OpenGLRenderer.m */; };
+		D8896C66164F431E0055668D /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8896C65164F431E0055668D /* InputController.m */; };
 		D8A3317C163DFFDB00014E23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A3317B163DFFDB00014E23 /* UIKit.framework */; };
 		D8A3317E163DFFDB00014E23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A3317D163DFFDB00014E23 /* Foundation.framework */; };
 		D8A33180163DFFDB00014E23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A3317F163DFFDB00014E23 /* CoreGraphics.framework */; };
@@ -155,6 +156,8 @@
 		D874AC521641A9050085799C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D874AC551641E8110085799C /* OpenGLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLRenderer.h; path = Common/OpenGLRenderer.h; sourceTree = "<group>"; };
 		D874AC561641E8120085799C /* OpenGLRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLRenderer.m; path = Common/OpenGLRenderer.m; sourceTree = "<group>"; };
+		D8896C64164F431E0055668D /* InputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputController.h; path = Common/InputController.h; sourceTree = "<group>"; };
+		D8896C65164F431E0055668D /* InputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputController.m; path = Common/InputController.m; sourceTree = "<group>"; };
 		D8A33177163DFFDB00014E23 /* Pippin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pippin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A3317B163DFFDB00014E23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D8A3317D163DFFDB00014E23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -296,6 +299,8 @@
 				D874AC341641A30C0085799C /* Grid.m */,
 				D874AC351641A30C0085799C /* IndexBuffer.h */,
 				D874AC361641A30C0085799C /* IndexBuffer.m */,
+				D8896C64164F431E0055668D /* InputController.h */,
+				D8896C65164F431E0055668D /* InputController.m */,
 				D811DF5816479B24001EE707 /* MeshRenderer.h */,
 				D811DF5916479B24001EE707 /* MeshRenderer.m */,
 				D874AC551641E8110085799C /* OpenGLRenderer.h */,
@@ -661,6 +666,7 @@
 				D8DBBAF71648B03E00A4D2DB /* SpriteFrame.m in Sources */,
 				D8DBBAFC1648C39D00A4D2DB /* TextureController.m in Sources */,
 				D8DBBB001648E40400A4D2DB /* Parser.m in Sources */,
+				D8896C66164F431E0055668D /* InputController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
