@@ -9,6 +9,7 @@
 #import "MacOpenGLView.h"
 #import "OpenGLRenderer.h"
 #import "InputController.h"
+#import "MouseInputEvent.h"
 
 @interface MacOpenGLView ()
 {
@@ -129,25 +130,29 @@ static CVReturn OnDisplayLink( CVDisplayLinkRef displayLink, const CVTimeStamp *
 - (void)mouseDown:(NSEvent *)theEvent;
 {
 	CGPoint location = [theEvent locationInWindow];
-	[[InputController sharedController] mouseDown:GLKVector2Make( location.x, location.y )];
+	MouseInputEvent *mouseEvent = [[MouseInputEvent alloc] initWithPosition:GLKVector2Make( location.x, location.y )];	
+	[[InputController sharedController] sendMouseEvent:mouseEvent withSelector:@selector(mouseDown:)];
 }
 
 - (void)mouseUp:(NSEvent *)theEvent;
 {
 	CGPoint location = [theEvent locationInWindow];
-	[[InputController sharedController] mouseUp:GLKVector2Make( location.x, location.y )];
+	MouseInputEvent *mouseEvent = [[MouseInputEvent alloc] initWithPosition:GLKVector2Make( location.x, location.y )];
+	[[InputController sharedController] sendMouseEvent:mouseEvent withSelector:@selector(mouseUp:)];
 }
 
 - (void)mouseMoved:(NSEvent *)theEvent;
 {
 	CGPoint location = [theEvent locationInWindow];
-	[[InputController sharedController] mouseMoved:GLKVector2Make( location.x, location.y )];
+	MouseInputEvent *mouseEvent = [[MouseInputEvent alloc] initWithPosition:GLKVector2Make( location.x, location.y )];
+	[[InputController sharedController] sendMouseEvent:mouseEvent withSelector:@selector(mouseMoved:)];
 }
 
 - (void)mouseDragged:(NSEvent *)theEvent;
 {
 	CGPoint location = [theEvent locationInWindow];
-	[[InputController sharedController] mouseMoved:GLKVector2Make( location.x, location.y )];
+	MouseInputEvent *mouseEvent = [[MouseInputEvent alloc] initWithPosition:GLKVector2Make( location.x, location.y )];
+	[[InputController sharedController] sendMouseEvent:mouseEvent withSelector:@selector(mouseMoved:)];
 }
 
 - (void)keyDown:(NSEvent *)theEvent;

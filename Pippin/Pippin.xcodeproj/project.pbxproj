@@ -78,6 +78,11 @@
 		D8DBBAFD1648C39D00A4D2DB /* TextureController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBAFB1648C39D00A4D2DB /* TextureController.m */; };
 		D8DBBB001648E40400A4D2DB /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBAFF1648E40400A4D2DB /* Parser.m */; };
 		D8DBBB011648E40400A4D2DB /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBAFF1648E40400A4D2DB /* Parser.m */; };
+		D8DBBB561650AE1100A4D2DB /* MouseInputEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBB551650AE1100A4D2DB /* MouseInputEvent.m */; };
+		D8DBBB571650AE1100A4D2DB /* MouseInputEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBB551650AE1100A4D2DB /* MouseInputEvent.m */; };
+		D8DBBB5A1650AE3900A4D2DB /* TouchInputEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBB591650AE3900A4D2DB /* TouchInputEvent.m */; };
+		D8DBBB5B1650AE3900A4D2DB /* TouchInputEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DBBB591650AE3900A4D2DB /* TouchInputEvent.m */; };
+		D8DBBB5C1650B4EC00A4D2DB /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8896C65164F431E0055668D /* InputController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +191,12 @@
 		D8DBBAFB1648C39D00A4D2DB /* TextureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextureController.m; path = Common/TextureController.m; sourceTree = "<group>"; };
 		D8DBBAFE1648E40300A4D2DB /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Parser.h; path = Common/Parser.h; sourceTree = "<group>"; };
 		D8DBBAFF1648E40400A4D2DB /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Parser.m; path = Common/Parser.m; sourceTree = "<group>"; };
+		D8DBBB541650AE1000A4D2DB /* MouseInputEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MouseInputEvent.h; path = Common/MouseInputEvent.h; sourceTree = "<group>"; };
+		D8DBBB551650AE1100A4D2DB /* MouseInputEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MouseInputEvent.m; path = Common/MouseInputEvent.m; sourceTree = "<group>"; };
+		D8DBBB581650AE3900A4D2DB /* TouchInputEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchInputEvent.h; path = Common/TouchInputEvent.h; sourceTree = "<group>"; };
+		D8DBBB591650AE3900A4D2DB /* TouchInputEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchInputEvent.m; path = Common/TouchInputEvent.m; sourceTree = "<group>"; };
+		D8DBBB5D1650B56D00A4D2DB /* MouseInputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MouseInputHandler.h; path = Common/MouseInputHandler.h; sourceTree = "<group>"; };
+		D8DBBB5E1650B5C400A4D2DB /* TouchInputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TouchInputHandler.h; path = Common/TouchInputHandler.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +314,9 @@
 				D8896C65164F431E0055668D /* InputController.m */,
 				D811DF5816479B24001EE707 /* MeshRenderer.h */,
 				D811DF5916479B24001EE707 /* MeshRenderer.m */,
+				D8DBBB541650AE1000A4D2DB /* MouseInputEvent.h */,
+				D8DBBB551650AE1100A4D2DB /* MouseInputEvent.m */,
+				D8DBBB5D1650B56D00A4D2DB /* MouseInputHandler.h */,
 				D874AC551641E8110085799C /* OpenGLRenderer.h */,
 				D874AC561641E8120085799C /* OpenGLRenderer.m */,
 				D8DBBAFE1648E40300A4D2DB /* Parser.h */,
@@ -317,6 +331,9 @@
 				D8DBBAF61648B03E00A4D2DB /* SpriteFrame.m */,
 				D8DBBAFA1648C39D00A4D2DB /* TextureController.h */,
 				D8DBBAFB1648C39D00A4D2DB /* TextureController.m */,
+				D8DBBB581650AE3900A4D2DB /* TouchInputEvent.h */,
+				D8DBBB591650AE3900A4D2DB /* TouchInputEvent.m */,
+				D8DBBB5E1650B5C400A4D2DB /* TouchInputHandler.h */,
 				D874AC2F1640EB5A0085799C /* VertexArrayObject.h */,
 				D874AC301640EB5A0085799C /* VertexArrayObject.m */,
 				D874AC3B1641A30E0085799C /* VertexBuffer.h */,
@@ -610,6 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8DBBB5C1650B4EC00A4D2DB /* InputController.m in Sources */,
 				D811DF5E16479EBB001EE707 /* Entity.m in Sources */,
 				D811DF5F16479EBB001EE707 /* EntityController.m in Sources */,
 				D811DF6016479EBB001EE707 /* MeshRenderer.m in Sources */,
@@ -630,6 +648,8 @@
 				D8DBBAF81648B03E00A4D2DB /* SpriteFrame.m in Sources */,
 				D8DBBAFD1648C39D00A4D2DB /* TextureController.m in Sources */,
 				D8DBBB011648E40400A4D2DB /* Parser.m in Sources */,
+				D8DBBB571650AE1100A4D2DB /* MouseInputEvent.m in Sources */,
+				D8DBBB5B1650AE3900A4D2DB /* TouchInputEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +687,8 @@
 				D8DBBAFC1648C39D00A4D2DB /* TextureController.m in Sources */,
 				D8DBBB001648E40400A4D2DB /* Parser.m in Sources */,
 				D8896C66164F431E0055668D /* InputController.m in Sources */,
+				D8DBBB561650AE1100A4D2DB /* MouseInputEvent.m in Sources */,
+				D8DBBB5A1650AE3900A4D2DB /* TouchInputEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

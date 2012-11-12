@@ -8,6 +8,8 @@
 
 #import "EAGLView.h"
 #import "OpenGLES2Renderer.h"
+#import "InputController.h"
+#import "TouchInputEvent.h"
 
 @interface EAGLView ()
 
@@ -75,22 +77,54 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 {
-	[_renderer touchesBegan:touches withEvent:event];
+	for( UITouch *touch in touches )
+	{
+		CGPoint location = [touch locationInView: [touch view]];
+		location.y = [touch view].bounds.size.height - location.y;
+		GLKVector2 position = GLKVector2Make( location.x, location.y );
+
+		TouchInputEvent *touchEvent = [[TouchInputEvent alloc] initWithPosition:position tapCount:touch.tapCount];
+		[[InputController sharedController] sendTouchEvent:touchEvent];
+	}
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
 {
-	[_renderer touchesCancelled:touches withEvent:event];
+	for( UITouch *touch in touches )
+	{
+		CGPoint location = [touch locationInView: [touch view]];
+		location.y = [touch view].bounds.size.height - location.y;
+		GLKVector2 position = GLKVector2Make( location.x, location.y );
+
+		TouchInputEvent *touchEvent = [[TouchInputEvent alloc] initWithPosition:position tapCount:touch.tapCount];
+		[[InputController sharedController] sendTouchEvent:touchEvent];
+	}
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
 {
-	[_renderer touchesEnded:touches withEvent:event];
+	for( UITouch *touch in touches )
+	{
+		CGPoint location = [touch locationInView: [touch view]];
+		location.y = [touch view].bounds.size.height - location.y;
+		GLKVector2 position = GLKVector2Make( location.x, location.y );
+
+		TouchInputEvent *touchEvent = [[TouchInputEvent alloc] initWithPosition:position tapCount:touch.tapCount];
+		[[InputController sharedController] sendTouchEvent:touchEvent];
+	}
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 {
-	[_renderer touchesMoved:touches withEvent:event];
+	for( UITouch *touch in touches )
+	{
+		CGPoint location = [touch locationInView: [touch view]];
+		location.y = [touch view].bounds.size.height - location.y;
+		GLKVector2 position = GLKVector2Make( location.x, location.y );
+
+		TouchInputEvent *touchEvent = [[TouchInputEvent alloc] initWithPosition:position tapCount:touch.tapCount];
+		[[InputController sharedController] sendTouchEvent:touchEvent];
+	}
 }
 
 @end

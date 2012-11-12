@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Entity.h"
+#import "MouseInputHandler.h"
 
 @class Sprite;
 
-@interface Button : Entity
+@interface Button : Entity <MouseInputHandler>
 {
 }
 

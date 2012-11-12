@@ -7,15 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MouseInputHandler.h"
+#import "TouchInputHandler.h"
+
+@class MouseInputEvent;
+@class TouchInputEvent;
 
 @interface InputController : NSObject
 {
 }
 
+@property (nonatomic, retain, readonly) NSMutableArray *mouseInputHandlers;
+@property (nonatomic, retain, readonly) NSMutableArray *touchInputHandlers;
+
 + (InputController *)sharedController;
 
-- (void)mouseDown:(GLKVector2)position;
-- (void)mouseUp:(GLKVector2)position;
-- (void)mouseMoved:(GLKVector2)position;
+- (void)addMouseInputHandler:(id<MouseInputHandler>)mouseInputHandler;
+- (void)addTouchInputHandler:(id<TouchInputHandler>)touchInputHandler;
+
+- (void)sendMouseEvent:(MouseInputEvent *)mouseEvent withSelector:(SEL)selector;
+- (void)sendTouchEvent:(TouchInputEvent *)touchEvent withSelector:(SEL)selector;
 
 @end

@@ -7,29 +7,73 @@
 //
 
 #import "InputController.h"
+#import "MouseInputEvent.h"
+#import "TouchInputEvent.h"
 
 static InputController *_sharedController;
 
 @implementation InputController
 
+@synthesize mouseInputHandlers = _mouseInputHandlers;
+@synthesize touchInputHandlers = _touchInputHandlers;
+
 + (InputController *)sharedController
 {
+	if( _sharedController == nil )
+	{
+		_sharedController = [[InputController alloc] init];
+	}
+	
 	return _sharedController;
 }
 
-- (void)mouseDown:(GLKVector2)position;
+- (id)init;
 {
+	self = [super init];
+	if( self != nil )
+	{
+		_mouseInputHandlers = [[NSMutableArray alloc] init];
+		_touchInputHandlers = [[NSMutableArray alloc] init];
+	}
 	
+	return self;
 }
 
-- (void)mouseUp:(GLKVector2)position;
+- (void)addMouseInputHandler:(id<MouseInputHandler>)mouseInputHandler;
 {
-	
+	[_mouseInputHandlers addObject:mouseInputHandler];
 }
 
-- (void)mouseMoved:(GLKVector2)position;
+- (void)addTouchInputHandler:(id<TouchInputHandler>)touchInputHandler;
 {
-	
+}
+
+- (void)sendMouseEvent:(MouseInputEvent *)mouseEvent withSelector:(SEL)selector;
+{
+	for( id<MouseInputHandler> handler in self.mouseInputHandlers )
+	{
+		if( [handler respondsToSelector:selector] )
+		{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+			[handler performSelector:selector withObject:mouseEvent];
+#pragma clang pop
+		}
+	}
+}
+
+- (void)sendTouchEvent:(TouchInputEvent *)touchEvent withSelector:(SEL)selector;
+{
+	for( id<TouchInputHandler> handler in self.touchInputHandlers )
+	{
+		if( [handler respondsToSelector:selector] )
+		{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+			[handler performSelector:selector withObject:touchEvent];
+#pragma clang pop
+		}
+	}
 }
 
 @end

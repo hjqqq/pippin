@@ -9,6 +9,7 @@
 #import "Button.h"
 #import "Parser.h"
 #import "MeshRenderer.h"
+#import "InputController.h"
 
 @implementation Button
 
@@ -26,6 +27,8 @@
 		self.meshRenderer = [[MeshRenderer alloc] init];
 		
 		self.meshRenderer.sprite = idleSprite;
+		
+		[[InputController sharedController] addMouseInputHandler:self];
 	}
 	
 	return self;
@@ -34,6 +37,19 @@
 - (void)renderWithCamera:(Camera *)camera;
 {
 	[self.meshRenderer renderWithCamera:camera modelViewMatrix:self.transform];
+}
+
+- (void)mouseDown:(MouseInputEvent *)event;
+{
+	NSLog( @"mouseDown" );
+}
+
+- (void)mouseUp:(MouseInputEvent *)event;
+{
+}
+
+- (void)mouseMoved:(MouseInputEvent *)event;
+{
 }
 
 @end

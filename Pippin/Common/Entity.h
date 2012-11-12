@@ -23,7 +23,6 @@
 @property (nonatomic) CGRect bounds;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
-- (id)initWithName:(NSString *)aName sprite:(Sprite *)aSprite position:(GLKVector3)position size:(GLKVector3)size;
 
 - (void)renderWithCamera:(Camera *)camera;
 
