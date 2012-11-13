@@ -13,6 +13,7 @@
 #import "TextureController.h"
 #import "SpriteController.h"
 #import "EntityController.h"
+#import "GUIController.h"
 
 @implementation Game
 
@@ -25,6 +26,7 @@
 	{
 		[SpriteController initSharedControllerWithContentsOfFile:@"data/json/sprites.json"];
 		[EntityController initSharedControllerWithContentsOfFile:@"data/json/entities.json"];
+		[GUIController initSharedControllerWithContentsOfFile:@"data/json/ui.json"];
 		
 		Color bgColor = ColorMake( 0.0f, 0.0f, 0.0f, 1.0f );
 		self.scene = [[Scene alloc] initWithViewportSize:size backgroundColor:bgColor];
@@ -45,39 +47,5 @@
 {
 	[self.scene viewportSizeChanged:size];
 }
-
-/*
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
-{
-	for( UITouch *touch in touches )
-	{
-		CGPoint location = [touch locationInView: [touch view]];
-		location.y = [touch view].bounds.size.height - location.y;
-	
-		for( Entity *entity in self.scene.entities )
-		{
-			if( CGRectContainsPoint( entity.bounds, location ) )
-			{
-				// Hit
-			}
-		}
-	}
-}
-
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
-{
-	
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
-{
-	
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
-{
-	
-}
-*/
 
 @end

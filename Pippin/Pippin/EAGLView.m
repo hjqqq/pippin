@@ -84,7 +84,7 @@
 		GLKVector2 position = GLKVector2Make( location.x, location.y );
 
 		TouchInputEvent *touchEvent = [[TouchInputEvent alloc] initWithPosition:position tapCount:touch.tapCount];
-		[[InputController sharedController] sendTouchEvent:touchEvent];
+		[[InputController sharedController] sendTouchEvent:touchEvent withSelector:@selector(touchBegan:)];
 	}
 }
 
@@ -97,7 +97,7 @@
 		GLKVector2 position = GLKVector2Make( location.x, location.y );
 
 		TouchInputEvent *touchEvent = [[TouchInputEvent alloc] initWithPosition:position tapCount:touch.tapCount];
-		[[InputController sharedController] sendTouchEvent:touchEvent];
+		[[InputController sharedController] sendTouchEvent:touchEvent withSelector:@selector(touchEnded:)];
 	}
 }
 
@@ -110,7 +110,7 @@
 		GLKVector2 position = GLKVector2Make( location.x, location.y );
 
 		TouchInputEvent *touchEvent = [[TouchInputEvent alloc] initWithPosition:position tapCount:touch.tapCount];
-		[[InputController sharedController] sendTouchEvent:touchEvent];
+		[[InputController sharedController] sendTouchEvent:touchEvent withSelector:@selector(touchEnded:)];
 	}
 }
 
@@ -123,7 +123,7 @@
 		GLKVector2 position = GLKVector2Make( location.x, location.y );
 
 		TouchInputEvent *touchEvent = [[TouchInputEvent alloc] initWithPosition:position tapCount:touch.tapCount];
-		[[InputController sharedController] sendTouchEvent:touchEvent];
+		[[InputController sharedController] sendTouchEvent:touchEvent withSelector:@selector(touchMoved:)];
 	}
 }
 

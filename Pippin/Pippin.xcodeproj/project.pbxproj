@@ -19,6 +19,14 @@
 		D811DF6016479EBB001EE707 /* MeshRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5916479B24001EE707 /* MeshRenderer.m */; };
 		D826A2171643822900F9E0F6 /* data in Resources */ = {isa = PBXBuildFile; fileRef = D826A2161643822900F9E0F6 /* data */; };
 		D826A2181643822900F9E0F6 /* data in Resources */ = {isa = PBXBuildFile; fileRef = D826A2161643822900F9E0F6 /* data */; };
+		D83159501651D99F00B0A613 /* GUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D831594F1651D99F00B0A613 /* GUIController.m */; };
+		D83159521651F1F800B0A613 /* GUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D831594F1651D99F00B0A613 /* GUIController.m */; };
+		D83159551652070400B0A613 /* GUIScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D83159541652070400B0A613 /* GUIScreen.m */; };
+		D83159561652070C00B0A613 /* GUIScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D83159541652070400B0A613 /* GUIScreen.m */; };
+		D8315959165209F000B0A613 /* EntityParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8315958165209F000B0A613 /* EntityParser.m */; };
+		D831595C16520D5300B0A613 /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D831595B16520D5300B0A613 /* JSONParser.m */; };
+		D831595D16520D5300B0A613 /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D831595B16520D5300B0A613 /* JSONParser.m */; };
+		D831595E16520D5F00B0A613 /* EntityParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D8315958165209F000B0A613 /* EntityParser.m */; };
 		D874AB801640D7140085799C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D874AB7E1640D7140085799C /* InfoPlist.strings */; };
 		D874AB821640D7140085799C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AB811640D7140085799C /* main.m */; };
 		D874AB861640D7140085799C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D874AB841640D7140085799C /* Credits.rtf */; };
@@ -114,6 +122,14 @@
 		D811DF5B16479D5B001EE707 /* EntityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityController.h; path = Common/EntityController.h; sourceTree = "<group>"; };
 		D811DF5C16479D5B001EE707 /* EntityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntityController.m; path = Common/EntityController.m; sourceTree = "<group>"; };
 		D826A2161643822900F9E0F6 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
+		D831594E1651D99F00B0A613 /* GUIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIController.h; path = Common/GUIController.h; sourceTree = "<group>"; };
+		D831594F1651D99F00B0A613 /* GUIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUIController.m; path = Common/GUIController.m; sourceTree = "<group>"; };
+		D83159531652070300B0A613 /* GUIScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIScreen.h; path = Common/GUIScreen.h; sourceTree = "<group>"; };
+		D83159541652070400B0A613 /* GUIScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUIScreen.m; path = Common/GUIScreen.m; sourceTree = "<group>"; };
+		D8315957165209EF00B0A613 /* EntityParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityParser.h; path = Common/EntityParser.h; sourceTree = "<group>"; };
+		D8315958165209F000B0A613 /* EntityParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntityParser.m; path = Common/EntityParser.m; sourceTree = "<group>"; };
+		D831595A16520D5200B0A613 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONParser.h; path = Common/JSONParser.h; sourceTree = "<group>"; };
+		D831595B16520D5300B0A613 /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONParser.m; path = Common/JSONParser.m; sourceTree = "<group>"; };
 		D874AB731640D7140085799C /* Pippin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pippin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D874AB751640D7140085799C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		D874AB781640D7140085799C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -304,14 +320,22 @@
 				D811DF5216475B6D001EE707 /* Entity.m */,
 				D811DF5B16479D5B001EE707 /* EntityController.h */,
 				D811DF5C16479D5B001EE707 /* EntityController.m */,
+				D8315957165209EF00B0A613 /* EntityParser.h */,
+				D8315958165209F000B0A613 /* EntityParser.m */,
 				D874ABC91640DD510085799C /* Game.h */,
 				D874ABCA1640DD510085799C /* Game.m */,
 				D874AC331641A30B0085799C /* Grid.h */,
 				D874AC341641A30C0085799C /* Grid.m */,
+				D831594E1651D99F00B0A613 /* GUIController.h */,
+				D831594F1651D99F00B0A613 /* GUIController.m */,
+				D83159531652070300B0A613 /* GUIScreen.h */,
+				D83159541652070400B0A613 /* GUIScreen.m */,
 				D874AC351641A30C0085799C /* IndexBuffer.h */,
 				D874AC361641A30C0085799C /* IndexBuffer.m */,
 				D8896C64164F431E0055668D /* InputController.h */,
 				D8896C65164F431E0055668D /* InputController.m */,
+				D831595A16520D5200B0A613 /* JSONParser.h */,
+				D831595B16520D5300B0A613 /* JSONParser.m */,
 				D811DF5816479B24001EE707 /* MeshRenderer.h */,
 				D811DF5916479B24001EE707 /* MeshRenderer.m */,
 				D8DBBB541650AE1000A4D2DB /* MouseInputEvent.h */,
@@ -627,6 +651,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D831595E16520D5F00B0A613 /* EntityParser.m in Sources */,
+				D83159561652070C00B0A613 /* GUIScreen.m in Sources */,
+				D83159521651F1F800B0A613 /* GUIController.m in Sources */,
 				D8DBBB5C1650B4EC00A4D2DB /* InputController.m in Sources */,
 				D811DF5E16479EBB001EE707 /* Entity.m in Sources */,
 				D811DF5F16479EBB001EE707 /* EntityController.m in Sources */,
@@ -650,6 +677,7 @@
 				D8DBBB011648E40400A4D2DB /* Parser.m in Sources */,
 				D8DBBB571650AE1100A4D2DB /* MouseInputEvent.m in Sources */,
 				D8DBBB5B1650AE3900A4D2DB /* TouchInputEvent.m in Sources */,
+				D831595D16520D5300B0A613 /* JSONParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,6 +717,10 @@
 				D8896C66164F431E0055668D /* InputController.m in Sources */,
 				D8DBBB561650AE1100A4D2DB /* MouseInputEvent.m in Sources */,
 				D8DBBB5A1650AE3900A4D2DB /* TouchInputEvent.m in Sources */,
+				D83159501651D99F00B0A613 /* GUIController.m in Sources */,
+				D83159551652070400B0A613 /* GUIScreen.m in Sources */,
+				D8315959165209F000B0A613 /* EntityParser.m in Sources */,
+				D831595C16520D5300B0A613 /* JSONParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

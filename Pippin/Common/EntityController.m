@@ -10,7 +10,7 @@
 #import "SpriteController.h"
 #import "Sprite.h"
 #import "Entity.h"
-#import "Parser.h"
+#import "EntityParser.h"
 
 static EntityController *_sharedController;
 
@@ -40,38 +40,14 @@ static EntityController *_sharedController;
 	if( self != nil )
 	{
 		_entities = [[NSMutableDictionary alloc] init];
-	
-		NSString *bundlePath = [[NSBundle mainBundle] pathForResource:path ofType:nil];
-		NSData *fileData = [NSData dataWithContentsOfFile:bundlePath];
-		NSError *error = nil;
 		
-		id jsonData = [NSJSONSerialization JSONObjectWithData:fileData options:0 error:&error];
-		if( ![jsonData respondsToSelector:@selector(objectForKey:)] )
+		[JSONParser parseContentsOfFile:path jsonObjectParsed:^(NSDictionary *dict)
 		{
-			// Error, expecting a dictionary with the key "entities"
-		}
-		
-		NSArray *entitiesArray = [jsonData objectForKey:@"entities"];
-		if( entitiesArray == nil )
-		{
-			// Error, expecting a dictionary with the key "entities"
-		}
-		
-		NSLog( @"EntityController: Loading %d entities...\n", (int)[entitiesArray count] );
-		for( id entityDict in entitiesArray )
-		{
-			NSString *type = [entityDict objectForKey:@"type"];
-			if( type == nil )
+			[EntityParser parse:[dict objectForKey:@"entities"] entityParsed:^(Entity *entity)
 			{
-				// Error, require a type
-			}
-			
-			Class entityClass = NSClassFromString( type );
-			Entity *entity = [[entityClass alloc] initWithDictionary:entityDict];
-			[_entities setObject:entity forKey:entity.name];
-			
-			NSLog( @"...%@\n", entity.name );
-		}
+				[_entities setObject:entity forKey:entity.name];
+			}];
+		}];
 	}
 	
 	return self;

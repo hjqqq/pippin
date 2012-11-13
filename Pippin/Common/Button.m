@@ -7,7 +7,6 @@
 //
 
 #import "Button.h"
-#import "Parser.h"
 #import "MeshRenderer.h"
 #import "InputController.h"
 
@@ -41,11 +40,12 @@
 
 - (void)mouseDown:(MouseInputEvent *)event;
 {
-	NSLog( @"mouseDown" );
+	self.meshRenderer.sprite = self.pressedSprite;
 }
 
 - (void)mouseUp:(MouseInputEvent *)event;
 {
+	self.meshRenderer.sprite = self.idleSprite;
 }
 
 - (void)mouseMoved:(MouseInputEvent *)event;

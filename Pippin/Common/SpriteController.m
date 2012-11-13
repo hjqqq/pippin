@@ -9,7 +9,6 @@
 #import "SpriteController.h"
 #import "TextureController.h"
 #import "Sprite.h"
-#import "Parser.h"
 
 static SpriteController *_sharedController;
 
@@ -39,52 +38,45 @@ static SpriteController *_sharedController;
 	if( self != nil )
 	{
 		_sprites = [[NSMutableDictionary alloc] init];
-	
-		NSString *bundlePath = [[NSBundle mainBundle] pathForResource:path ofType:nil];
-		NSData *fileData = [NSData dataWithContentsOfFile:bundlePath];
-		NSError *error = nil;
-		
-		id jsonData = [NSJSONSerialization JSONObjectWithData:fileData options:0 error:&error];
-		if( ![jsonData respondsToSelector:@selector(objectForKey:)] )
-		{
-			// Error, expecting a dictionary with the key "sprites"
-		}
-		
-		NSArray *spritesArray = [jsonData objectForKey:@"sprites"];
-		if( spritesArray == nil )
-		{
-			// Error, expecting a dictionary with the key "sprites"
-		}
-		
-		NSLog( @"SpriteController: Loading %d sprites...\n", (int)[spritesArray count] );
-		for( id spriteDict in spritesArray )
-		{
-			Sprite *sprite;
-			NSString *name = [spriteDict objectForKey:@"name"];
-			GLKVector2 size = [Parser parseVec2Size:spriteDict];
-			
-			NSString *texturePath = [spriteDict objectForKey:@"texture"];
-			GLKTextureInfo *texture = [[TextureController sharedController] textureNamed:texturePath];
-			if( texture == nil )
-			{
-				// Error, no texture found
-			}
-			
-			unsigned int numFrames = [Parser parseNumFrames:spriteDict];
-			if( numFrames > 1 )
-			{
-				sprite = [[Sprite alloc] initWithName:name texture:texture size:size numFrames:numFrames];
-			}
-			else
-			{
-				GLKVector2 texMins = [Parser parseTexMins:spriteDict];
-				GLKVector2 texMaxs = [Parser parseTexMaxs:spriteDict];
-				sprite = [[Sprite alloc] initWithName:name texture:texture size:size texMins:texMins texMaxs:texMaxs];
-			}
-			[_sprites setObject:sprite forKey:sprite.name];
 
-			NSLog( @"...%@\n", sprite.name );
-		}
+		[JSONParser parseContentsOfFile:path jsonObjectParsed:^(NSDictionary *dict)
+		{
+			NSArray *spritesArray = [dict objectForKey:@"sprites"];
+			if( spritesArray == nil )
+			{
+				// Error, expecting a dictionary with the key "sprites"
+			}
+
+			NSLog( @"SpriteController: Loading %d sprites...\n", (int)[spritesArray count] );
+			for( id spriteDict in spritesArray )
+			{
+				Sprite *sprite;
+				NSString *name = [spriteDict objectForKey:@"name"];
+				GLKVector2 size = [Parser parseVec2Size:spriteDict];
+				
+				NSString *texturePath = [spriteDict objectForKey:@"texture"];
+				GLKTextureInfo *texture = [[TextureController sharedController] textureNamed:texturePath];
+				if( texture == nil )
+				{
+					// Error, no texture found
+				}
+				
+				unsigned int numFrames = [Parser parseNumFrames:spriteDict];
+				if( numFrames > 1 )
+				{
+					sprite = [[Sprite alloc] initWithName:name texture:texture size:size numFrames:numFrames];
+				}
+				else
+				{
+					GLKVector2 texMins = [Parser parseTexMins:spriteDict];
+					GLKVector2 texMaxs = [Parser parseTexMaxs:spriteDict];
+					sprite = [[Sprite alloc] initWithName:name texture:texture size:size texMins:texMins texMaxs:texMaxs];
+				}
+				[_sprites setObject:sprite forKey:sprite.name];
+
+				NSLog( @"...%@\n", sprite.name );
+			}
+		}];
 	}
 	
 	return self;

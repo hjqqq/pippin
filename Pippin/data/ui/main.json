@@ -1,0 +1,12 @@
+{
+	"entities": [
+		{
+			"name": "button",
+			"type": "Button",
+			"position": [ 1.0, 0.0 ],
+			"size": [ 64.0, 16.0 ],
+			"idleSprite": "button_idle",
+			"pressedSprite": "button_pressed",
+		}
+	]
+}

@@ -6,4 +6,6 @@
 	#import <Cocoa/Cocoa.h>
 	#import <GLKit/GLKit.h>
 	#import "Color.h"
+	#import "Parser.h"
+	#import "JSONParser.h"
 #endif

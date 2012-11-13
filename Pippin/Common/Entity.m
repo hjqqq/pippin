@@ -9,7 +9,6 @@
 #import "Entity.h"
 #import "Sprite.h"
 #import "SpriteFrame.h"
-#import "Parser.h"
 
 @interface Entity ()
 
