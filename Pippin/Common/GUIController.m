@@ -46,7 +46,6 @@ static GUIController *_sharedController;
 	{
 		_screens = [[NSMutableDictionary alloc] init];
 		_camera = [[Camera alloc] initWithViewportWidth:1.0f height:1.0f ];
-		_camera.scale = GLKVector3Make( 2.0f, 2.0f, 1.0f );
 
 		[JSONParser parseContentsOfFile:path jsonObjectParsed:^(NSDictionary *dict)
 		{
@@ -132,7 +131,7 @@ static GUIController *_sharedController;
 	{
 		if( _hitButton != nil )
 		{
-			if( CGRectContainsPoint( _hitButton.bounds, CGPointMake( event.position.x, event.position.y ) )  )
+			if( CGRectContainsPoint( _hitButton.worldBounds, CGPointMake( event.position.x, event.position.y ) )  )
 			{
 				_hitButton.meshRenderer.sprite = _hitButton.pressedSprite;
 			}

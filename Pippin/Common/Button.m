@@ -33,7 +33,9 @@
 
 - (void)renderWithCamera:(Camera *)camera;
 {
-	[self.meshRenderer renderWithCamera:camera modelViewMatrix:self.transform];
+	[super renderWithCamera:camera];
+
+	[self.meshRenderer renderWithCamera:camera modelViewMatrix:self.worldTransform];
 }
 
 - (void)mouseDown:(MouseInputEvent *)event;

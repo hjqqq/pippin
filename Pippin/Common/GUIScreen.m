@@ -12,7 +12,7 @@
 
 @interface GUIScreen ()
 {
-	NSMutableArray *_entities;
+	Entity *_rootEntity;
 }
 
 @end
@@ -26,13 +26,14 @@
 	self = [super init];
 	if( self != nil )
 	{
-		_entities = [[NSMutableArray alloc] init];
-	
+		_rootEntity = [[Entity alloc] init];
+		_rootEntity.size = GLKVector3Make( 2.0f, 2.0f, 1.0f );
+		
 		[JSONParser parseContentsOfFile:path jsonObjectParsed:^(NSDictionary *dict)
 		{
 			[EntityParser parse:[dict objectForKey:@"entities"] entityParsed:^(Entity *entity)
 			{
-				[_entities addObject:entity];
+				[_rootEntity addChild:entity];
 			}];
 		}];
 	}
@@ -42,23 +43,23 @@
 
 - (Entity *)traceInput:(GLKVector2)position;
 {
-	for( Entity *entity in _entities )
+	__block Entity *hitEntity = nil;
+
+	[Entity yieldChildren:_rootEntity childEntity:^(Entity *childEntityX)
 	{
-		if( CGRectContainsPoint( entity.bounds, CGPointMake( position.x, position.y ) ) )
+		if( CGRectContainsPoint( childEntityX.worldBounds, CGPointMake( position.x, position.y ) ) )
 		{
-			return entity;
+			hitEntity = childEntityX;
+			// TODO: Break
 		}
-	}
-	
-	return nil;
+	}];
+
+	return hitEntity;
 }
 
 - (void)renderWithCamera:(Camera *)camera;
 {
-	for( Entity *entity in _entities )
-	{
-		[entity renderWithCamera:camera];
-	}
+	[_rootEntity renderWithCamera:camera];
 }
 
 @end

@@ -20,9 +20,17 @@
 @property (nonatomic) GLKVector3 position;
 @property (nonatomic) GLKVector3 size;
 @property (nonatomic) GLKMatrix4 transform;
-@property (nonatomic) CGRect bounds;
+@property (nonatomic) GLKMatrix4 worldTransform;
+@property (nonatomic) CGRect worldBounds;
+@property (nonatomic, assign) Entity *parent;
+@property (nonatomic, readonly) NSArray *children;
+
++ (void)yieldChildren:(Entity *)entity childEntity:(void (^)( Entity *childEntity ) )childEntity;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
+
+- (void)addChild:(Entity *)child;
+- (void)removeChild:(Entity *)child;
 
 - (void)renderWithCamera:(Camera *)camera;
 
