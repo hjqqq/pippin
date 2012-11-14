@@ -40,6 +40,19 @@
 	return self;
 }
 
+- (Entity *)traceInput:(GLKVector2)position;
+{
+	for( Entity *entity in _entities )
+	{
+		if( CGRectContainsPoint( entity.bounds, CGPointMake( position.x, position.y ) ) )
+		{
+			return entity;
+		}
+	}
+	
+	return nil;
+}
+
 - (void)renderWithCamera:(Camera *)camera;
 {
 	for( Entity *entity in _entities )

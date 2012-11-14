@@ -7,8 +7,9 @@
 //
 
 #import "EntityController.h"
+#import "MouseInputHandler.h"
 
-@interface GUIController : NSObject
+@interface GUIController : NSObject <MouseInputHandler>
 {
 }
 

@@ -12,7 +12,7 @@
 
 @class Sprite;
 
-@interface Button : Entity <MouseInputHandler>
+@interface Button : Entity
 {
 }
 

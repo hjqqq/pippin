@@ -9,6 +9,10 @@
 #import "GUIController.h"
 #import "GUIScreen.h"
 #import "Camera.h"
+#import "Button.h"
+#import "Entity.h"
+#import "MouseInputEvent.h"
+#import "MeshRenderer.h"
 
 static GUIController *_sharedController;
 
@@ -17,6 +21,7 @@ static GUIController *_sharedController;
 	NSMutableDictionary *_screens;
 	GUIScreen *_screen;
 	Camera *_camera;
+	Button *_hitButton;
 }
 
 @end
@@ -41,6 +46,7 @@ static GUIController *_sharedController;
 	{
 		_screens = [[NSMutableDictionary alloc] init];
 		_camera = [[Camera alloc] initWithViewportWidth:1.0f height:1.0f ];
+		_camera.scale = GLKVector3Make( 2.0f, 2.0f, 1.0f );
 
 		[JSONParser parseContentsOfFile:path jsonObjectParsed:^(NSDictionary *dict)
 		{
@@ -83,6 +89,62 @@ static GUIController *_sharedController;
 	if( _screen != nil )
 	{
 		[_screen renderWithCamera:_camera];
+	}
+}
+
+#pragma mark MouseInputHandler
+
+- (void)mouseDown:(MouseInputEvent *)event;
+{
+	_hitButton = nil;
+
+	if( _screen != nil )
+	{
+		Entity *hitEntity = [_screen traceInput:event.position];
+		if( hitEntity != nil )
+		{
+			// TODO: Factor out this casting
+			if( [hitEntity isKindOfClass:[Button class]] )
+			{
+				_hitButton = (Button *)hitEntity;
+				_hitButton.meshRenderer.sprite = _hitButton.pressedSprite;
+			}
+		}
+	}
+}
+
+- (void)mouseUp:(MouseInputEvent *)event;
+{
+	if( _screen != nil )
+	{
+		_hitButton.meshRenderer.sprite = _hitButton.idleSprite;
+		_hitButton = nil;
+	}
+	else
+	{
+		_hitButton = nil;
+	}
+}
+
+- (void)mouseMoved:(MouseInputEvent *)event;
+{
+	if( _screen != nil )
+	{
+		if( _hitButton != nil )
+		{
+			if( CGRectContainsPoint( _hitButton.bounds, CGPointMake( event.position.x, event.position.y ) )  )
+			{
+				_hitButton.meshRenderer.sprite = _hitButton.pressedSprite;
+			}
+			else
+			{
+				_hitButton.meshRenderer.sprite = _hitButton.idleSprite;
+			}
+		}
+	}
+	else
+	{
+		_hitButton = nil;
 	}
 }
 

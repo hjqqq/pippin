@@ -26,8 +26,6 @@
 		self.meshRenderer = [[MeshRenderer alloc] init];
 		
 		self.meshRenderer.sprite = idleSprite;
-		
-		[[InputController sharedController] addMouseInputHandler:self];
 	}
 	
 	return self;

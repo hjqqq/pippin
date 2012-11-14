@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class Camera;
+@class Entity;
 
 @interface GUIScreen : NSObject
 {
@@ -18,6 +19,7 @@
 
 - (id)initWithContentsOfFile:(NSString *)path;
 
+- (Entity *)traceInput:(GLKVector2)position;
 - (void)renderWithCamera:(Camera *)camera;
 
 @end

@@ -12,6 +12,7 @@
 #import "SpriteController.h"
 #import "EntityController.h"
 #import "GUIController.h"
+#import "InputController.h"
 
 @implementation Game
 
@@ -25,8 +26,11 @@
 		[SpriteController initSharedControllerWithContentsOfFile:@"data/json/sprites.json"];
 		[EntityController initSharedControllerWithContentsOfFile:@"data/json/entities.json"];
 		[GUIController initSharedControllerWithContentsOfFile:@"data/json/ui.json"];
-		[[GUIController sharedController] viewportSizeChanged:size];
-		[[GUIController sharedController] setScreen:@"main"];
+		
+		GUIController *guiController = [GUIController sharedController];
+		[guiController viewportSizeChanged:size];
+		[guiController setScreen:@"main"];
+		[[InputController sharedController] addMouseInputHandler:guiController];
 		
 		Color bgColor = ColorMake( 0.0f, 0.0f, 0.0f, 1.0f );
 		self.scene = [[Scene alloc] initWithViewportSize:size backgroundColor:bgColor];
