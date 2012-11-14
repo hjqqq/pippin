@@ -17,4 +17,8 @@
 
 - (id)initWithContentsOfFile:(NSString *)path;
 
+- (void)setScreen:(NSString *)screenName;
+- (void)viewportSizeChanged:(GLKVector2)size;
+- (void)render;
+
 @end

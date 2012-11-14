@@ -8,8 +8,6 @@
 
 #import "Game.h"
 #import "Scene.h"
-#import "Sprite.h"
-#import "Entity.h"
 #import "TextureController.h"
 #import "SpriteController.h"
 #import "EntityController.h"
@@ -27,11 +25,11 @@
 		[SpriteController initSharedControllerWithContentsOfFile:@"data/json/sprites.json"];
 		[EntityController initSharedControllerWithContentsOfFile:@"data/json/entities.json"];
 		[GUIController initSharedControllerWithContentsOfFile:@"data/json/ui.json"];
+		[[GUIController sharedController] viewportSizeChanged:size];
+		[[GUIController sharedController] setScreen:@"main"];
 		
 		Color bgColor = ColorMake( 0.0f, 0.0f, 0.0f, 1.0f );
 		self.scene = [[Scene alloc] initWithViewportSize:size backgroundColor:bgColor];
-		
-		[self.scene addEntity:[[EntityController sharedController] entityNamed:@"button"]];
 	}
 	
 	return self;
@@ -39,13 +37,14 @@
 
 - (void)draw;
 {
-	[self.scene beginFrame];
 	[self.scene render];
+	[[GUIController sharedController] render];
 }
 
 - (void)viewportSizeChanged:(GLKVector2)size;
 {
 	[self.scene viewportSizeChanged:size];
+	[[GUIController sharedController] viewportSizeChanged:size];
 }
 
 @end

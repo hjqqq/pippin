@@ -8,4 +8,5 @@
 	#import "Color.h"
 	#import "Parser.h"
 	#import "JSONParser.h"
+	#import "EntityParser.h"
 #endif

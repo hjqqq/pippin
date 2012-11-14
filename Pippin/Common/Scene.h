@@ -24,7 +24,6 @@
 
 - (void)viewportSizeChanged:(GLKVector2)size;
 
-- (void)beginFrame;
 - (void)render;
 
 - (void)addEntity:(Entity *)entity;

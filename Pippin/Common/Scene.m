@@ -38,14 +38,11 @@
 	_camera.size = size;
 }
 
-- (void)beginFrame;
+- (void)render;
 {
 	glClearColor( self.bgColor.r, self.bgColor.g, self.bgColor.b, self.bgColor.a );
 	glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
-}
 
-- (void)render;
-{
 	for( Entity *entity in _entities )
 	{
 		[entity renderWithCamera:_camera];

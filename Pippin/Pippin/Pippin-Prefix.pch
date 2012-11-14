@@ -13,8 +13,10 @@
 	#import <Foundation/Foundation.h>
 	#import <GLKit/GLKit.h>
 	#import <QuartzCore/QuartzCore.h>
+	
+	#import "Color.h"
+	#import "Parser.h"
+	#import "JSONParser.h"
+	#import "EntityParser.h"
 #endif
 
-#import "Color.h"
-#import "Parser.h"
-#import "JSONParser.h"

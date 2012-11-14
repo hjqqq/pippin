@@ -8,13 +8,15 @@
 
 #import "GUIController.h"
 #import "GUIScreen.h"
-#import "EntityParser.h"
+#import "Camera.h"
 
 static GUIController *_sharedController;
 
 @interface GUIController ()
 {
 	NSMutableDictionary *_screens;
+	GUIScreen *_screen;
+	Camera *_camera;
 }
 
 @end
@@ -38,27 +40,50 @@ static GUIController *_sharedController;
 	if( self != nil )
 	{
 		_screens = [[NSMutableDictionary alloc] init];
+		_camera = [[Camera alloc] initWithViewportWidth:1.0f height:1.0f ];
 
 		[JSONParser parseContentsOfFile:path jsonObjectParsed:^(NSDictionary *dict)
 		{
 			NSLog( @"GUIController: Loading %d screens...\n", (int)[dict count] );
 			[dict enumerateKeysAndObjectsUsingBlock: ^( id key, id obj, BOOL *stop )
 			{
-				NSString *name = key;
-				NSString *path = obj;
+				NSString *screenName = key;
+				NSString *screenPath = obj;
 				
-				[JSONParser parseContentsOfFile:path jsonObjectParsed:^(NSDictionary *dict)
-				{
-					[EntityParser parse:[dict objectForKey:@"entities"] entityParsed:^(Entity *entity)
-					{
-						entity = entity;
-					}];
-				}];
+				GUIScreen *screen = [[GUIScreen alloc] initWithContentsOfFile:screenPath];
+				[_screens setObject:screen forKey:screenName];
 			}];
 		}];
 	}
 	
 	return self;
+}
+
+- (void)setScreen:(NSString *)screenName;
+{
+	GUIScreen *screen = [_screens objectForKey:screenName];
+	if( screen == nil )
+	{
+		// Error
+	}
+	
+	if( _screen != screen )
+	{
+		_screen = screen;
+	}
+}
+
+- (void)viewportSizeChanged:(GLKVector2)size;
+{
+	_camera.size = size;
+}
+
+- (void)render;
+{
+	if( _screen != nil )
+	{
+		[_screen renderWithCamera:_camera];
+	}
 }
 
 @end

@@ -10,7 +10,6 @@
 #import "SpriteController.h"
 #import "Sprite.h"
 #import "Entity.h"
-#import "EntityParser.h"
 
 static EntityController *_sharedController;
 

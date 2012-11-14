@@ -8,13 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class Camera;
+
 @interface GUIScreen : NSObject
 {
 }
 
 @property (strong, nonatomic) NSString *name;
 
-- (id)initWithDictionary:(NSDictionary *)dictionary;
+- (id)initWithContentsOfFile:(NSString *)path;
+
+- (void)renderWithCamera:(Camera *)camera;
 
 @end
 
