@@ -31,6 +31,7 @@
 		[guiController viewportSizeChanged:size];
 		[guiController setScreen:@"main"];
 		[[InputController sharedController] addMouseInputHandler:guiController];
+		[[InputController sharedController] addTouchInputHandler:guiController];
 		
 		Color bgColor = ColorMake( 0.0f, 0.0f, 0.0f, 1.0f );
 		self.scene = [[Scene alloc] initWithViewportSize:size backgroundColor:bgColor];

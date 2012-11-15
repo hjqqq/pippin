@@ -46,6 +46,7 @@ static InputController *_sharedController;
 
 - (void)addTouchInputHandler:(id<TouchInputHandler>)touchInputHandler;
 {
+	[_touchInputHandlers addObject:touchInputHandler];
 }
 
 - (void)sendMouseEvent:(MouseInputEvent *)mouseEvent withSelector:(SEL)selector;
