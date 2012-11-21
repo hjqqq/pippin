@@ -16,6 +16,7 @@
 }
 
 @property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) Entity *rootEntity;
 
 - (id)initWithContentsOfFile:(NSString *)path;
 

@@ -13,8 +13,9 @@
 @interface OpenGLRenderer : NSObject
 {
 	GLuint _defaultFBOName;
-	Game *_game;
 }
+
+@property (strong, nonatomic) Game *game;
 
 - (id)initWithDefaultFBO:(GLuint)defaultFBOName width:(unsigned int)width height:(unsigned int)height;
 

@@ -19,6 +19,8 @@
 
 @implementation OpenGLRenderer
 
+@synthesize game;
+
 - (id)initWithDefaultFBO:(GLuint)defaultFBOName width:(unsigned int)width height:(unsigned int)height;
 {
 	self = [super init];
@@ -36,8 +38,6 @@
 		glEnable( GL_BLEND );
 		glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA );
 		
-		_game = [[Game alloc] initWithViewportSize:GLKVector2Make( (float)width, (float)height )];
-		
 		[self render];
 	}
 	
@@ -46,7 +46,7 @@
 
 - (void)render;
 {
-	[_game draw];
+	[self.game draw];
 }
 
 - (void)resizeWithWidth:(GLuint)width height:(GLuint)height;
@@ -56,7 +56,7 @@
 	_viewWidth = width;
 	_viewHeight = height;
 	
-	[_game viewportSizeChanged:GLKVector2Make( width, height )];
+	[self.game viewportSizeChanged:GLKVector2Make( width, height )];
 }
 
 @end

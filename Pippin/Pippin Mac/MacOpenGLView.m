@@ -12,9 +12,6 @@
 #import "MouseInputEvent.h"
 
 @interface MacOpenGLView ()
-{
-	OpenGLRenderer *_renderer;
-}
 
 - (void)initializeOpenGL;
 - (void)draw;
@@ -23,6 +20,8 @@
 @end
 
 @implementation MacOpenGLView
+
+@synthesize renderer;
 
 // This is the renderer output callback function
 static CVReturn OnDisplayLink( CVDisplayLinkRef displayLink, const CVTimeStamp *now, const CVTimeStamp *outputTime,
@@ -107,7 +106,7 @@ static CVReturn OnDisplayLink( CVDisplayLinkRef displayLink, const CVTimeStamp *
 	[[self openGLContext] setValues:&swapInt forParameter:NSOpenGLCPSwapInterval];
 	
 	// Init our renderer.  Use 0 for the defaultFBO which is appropriate for MacOS (but not iOS)
-	_renderer = [[OpenGLRenderer alloc] initWithDefaultFBO:0 width:self.frame.size.width height:self.frame.size.height];
+	self.renderer = [[OpenGLRenderer alloc] initWithDefaultFBO:0 width:self.frame.size.width height:self.frame.size.height];
 }
 
 - (void)draw;
@@ -119,7 +118,7 @@ static CVReturn OnDisplayLink( CVDisplayLinkRef displayLink, const CVTimeStamp *
 	// Add a mutex around to avoid the threads accessing the context simultaneouslywhen resizing
 	CGLLockContext( [[self openGLContext] CGLContextObj] );
 	
-	[_renderer render];
+	[self.renderer render];
 	
 	CGLFlushDrawable( [[self openGLContext] CGLContextObj] );
 	CGLUnlockContext( [[self openGLContext] CGLContextObj] );
@@ -129,28 +128,28 @@ static CVReturn OnDisplayLink( CVDisplayLinkRef displayLink, const CVTimeStamp *
 
 - (void)mouseDown:(NSEvent *)theEvent;
 {
-	CGPoint location = [theEvent locationInWindow];
+	NSPoint location = [self convertPoint:[theEvent locationInWindow] fromView:nil];
 	MouseInputEvent *mouseEvent = [[MouseInputEvent alloc] initWithPosition:GLKVector2Make( location.x, location.y )];	
 	[[InputController sharedController] sendMouseEvent:mouseEvent withSelector:@selector(mouseDown:)];
 }
 
 - (void)mouseUp:(NSEvent *)theEvent;
 {
-	CGPoint location = [theEvent locationInWindow];
+	NSPoint location = [self convertPoint:[theEvent locationInWindow] fromView:nil];
 	MouseInputEvent *mouseEvent = [[MouseInputEvent alloc] initWithPosition:GLKVector2Make( location.x, location.y )];
 	[[InputController sharedController] sendMouseEvent:mouseEvent withSelector:@selector(mouseUp:)];
 }
 
 - (void)mouseMoved:(NSEvent *)theEvent;
 {
-	CGPoint location = [theEvent locationInWindow];
+	NSPoint location = [self convertPoint:[theEvent locationInWindow] fromView:nil];
 	MouseInputEvent *mouseEvent = [[MouseInputEvent alloc] initWithPosition:GLKVector2Make( location.x, location.y )];
 	[[InputController sharedController] sendMouseEvent:mouseEvent withSelector:@selector(mouseMoved:)];
 }
 
 - (void)mouseDragged:(NSEvent *)theEvent;
 {
-	CGPoint location = [theEvent locationInWindow];
+	NSPoint location = [self convertPoint:[theEvent locationInWindow] fromView:nil];
 	MouseInputEvent *mouseEvent = [[MouseInputEvent alloc] initWithPosition:GLKVector2Make( location.x, location.y )];
 	[[InputController sharedController] sendMouseEvent:mouseEvent withSelector:@selector(mouseMoved:)];
 }

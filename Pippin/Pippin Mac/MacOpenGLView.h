@@ -9,9 +9,13 @@
 #import <Cocoa/Cocoa.h>
 #import <QuartzCore/CVDisplayLink.h>
 
+@class OpenGLRenderer;
+
 @interface MacOpenGLView : NSOpenGLView
 {
 	CVDisplayLinkRef _displayLink;
 }
+
+@property OpenGLRenderer *renderer;
 
 @end

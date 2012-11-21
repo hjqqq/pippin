@@ -10,9 +10,13 @@
 #import "MouseInputHandler.h"
 #import "TouchInputHandler.h"
 
+@class GUIScreen;
+
 @interface GUIController : NSObject <MouseInputHandler, TouchInputHandler>
 {
 }
+
+@property (strong, nonatomic) GUIScreen *screen;
 
 + (GUIController *)sharedController;
 + (id)initSharedControllerWithContentsOfFile:(NSString *)path;

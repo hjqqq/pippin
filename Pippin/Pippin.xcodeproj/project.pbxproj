@@ -17,6 +17,8 @@
 		D811DF5E16479EBB001EE707 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5216475B6D001EE707 /* Entity.m */; };
 		D811DF5F16479EBB001EE707 /* EntityController.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5C16479D5B001EE707 /* EntityController.m */; };
 		D811DF6016479EBB001EE707 /* MeshRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5916479B24001EE707 /* MeshRenderer.m */; };
+		D81D0EDD1655F24A001C7FF7 /* EditorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D0EDC1655F24A001C7FF7 /* EditorWindowController.m */; };
+		D81D0EE11655F29C001C7FF7 /* EditorWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81D0EDF1655F29C001C7FF7 /* EditorWindow.xib */; };
 		D826A2171643822900F9E0F6 /* data in Resources */ = {isa = PBXBuildFile; fileRef = D826A2161643822900F9E0F6 /* data */; };
 		D826A2181643822900F9E0F6 /* data in Resources */ = {isa = PBXBuildFile; fileRef = D826A2161643822900F9E0F6 /* data */; };
 		D83159501651D99F00B0A613 /* GUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D831594F1651D99F00B0A613 /* GUIController.m */; };
@@ -121,6 +123,9 @@
 		D811DF5916479B24001EE707 /* MeshRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeshRenderer.m; path = Common/MeshRenderer.m; sourceTree = "<group>"; };
 		D811DF5B16479D5B001EE707 /* EntityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityController.h; path = Common/EntityController.h; sourceTree = "<group>"; };
 		D811DF5C16479D5B001EE707 /* EntityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntityController.m; path = Common/EntityController.m; sourceTree = "<group>"; };
+		D81D0EDB1655F24A001C7FF7 /* EditorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorWindowController.h; sourceTree = "<group>"; };
+		D81D0EDC1655F24A001C7FF7 /* EditorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorWindowController.m; sourceTree = "<group>"; };
+		D81D0EE01655F29C001C7FF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EditorWindow.xib; sourceTree = "<group>"; };
 		D826A2161643822900F9E0F6 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
 		D831594E1651D99F00B0A613 /* GUIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIController.h; path = Common/GUIController.h; sourceTree = "<group>"; };
 		D831594F1651D99F00B0A613 /* GUIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUIController.m; path = Common/GUIController.m; sourceTree = "<group>"; };
@@ -267,6 +272,8 @@
 			children = (
 				D874AB871640D7140085799C /* AppDelegate.h */,
 				D874AB881640D7140085799C /* AppDelegate.m */,
+				D81D0EDB1655F24A001C7FF7 /* EditorWindowController.h */,
+				D81D0EDC1655F24A001C7FF7 /* EditorWindowController.m */,
 				D874ABA81640D7CC0085799C /* MacOpenGLView.h */,
 				D874ABA91640D7CC0085799C /* MacOpenGLView.m */,
 				D874AC471641A35F0085799C /* Frameworks */,
@@ -284,6 +291,7 @@
 				D874AB811640D7140085799C /* main.m */,
 				D874AB831640D7140085799C /* Pippin Mac-Prefix.pch */,
 				D874AB841640D7140085799C /* Credits.rtf */,
+				D81D0EDF1655F29C001C7FF7 /* EditorWindow.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -583,6 +591,7 @@
 				D874AB861640D7140085799C /* Credits.rtf in Resources */,
 				D874AB8C1640D7150085799C /* MainMenu.xib in Resources */,
 				D826A2181643822900F9E0F6 /* data in Resources */,
+				D81D0EE11655F29C001C7FF7 /* EditorWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +687,7 @@
 				D8DBBB571650AE1100A4D2DB /* MouseInputEvent.m in Sources */,
 				D8DBBB5B1650AE3900A4D2DB /* TouchInputEvent.m in Sources */,
 				D831595D16520D5300B0A613 /* JSONParser.m in Sources */,
+				D81D0EDD1655F24A001C7FF7 /* EditorWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,6 +758,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D81D0EDF1655F29C001C7FF7 /* EditorWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D81D0EE01655F29C001C7FF7 /* en */,
+			);
+			name = EditorWindow.xib;
+			sourceTree = "<group>";
+		};
 		D874AB7E1640D7140085799C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

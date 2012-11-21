@@ -20,7 +20,6 @@ static GUIController *_sharedController;
 @interface GUIController ()
 {
 	NSMutableDictionary *_screens;
-	GUIScreen *_screen;
 	Camera *_camera;
 	Button *_hitButton;
 }
@@ -28,6 +27,8 @@ static GUIController *_sharedController;
 @end
 
 @implementation GUIController
+
+@synthesize screen = _screen;
 
 + (GUIController *)sharedController
 {
