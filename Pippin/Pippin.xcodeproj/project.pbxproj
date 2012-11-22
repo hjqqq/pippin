@@ -17,10 +17,10 @@
 		D811DF5E16479EBB001EE707 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5216475B6D001EE707 /* Entity.m */; };
 		D811DF5F16479EBB001EE707 /* EntityController.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5C16479D5B001EE707 /* EntityController.m */; };
 		D811DF6016479EBB001EE707 /* MeshRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D811DF5916479B24001EE707 /* MeshRenderer.m */; };
-		D81D0EDD1655F24A001C7FF7 /* EditorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D0EDC1655F24A001C7FF7 /* EditorWindowController.m */; };
 		D81D0EE11655F29C001C7FF7 /* EditorWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81D0EDF1655F29C001C7FF7 /* EditorWindow.xib */; };
 		D826A2171643822900F9E0F6 /* data in Resources */ = {isa = PBXBuildFile; fileRef = D826A2161643822900F9E0F6 /* data */; };
 		D826A2181643822900F9E0F6 /* data in Resources */ = {isa = PBXBuildFile; fileRef = D826A2161643822900F9E0F6 /* data */; };
+		D826BF2D165E1A3400FD32A5 /* EditorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D826BF2C165E1A3400FD32A5 /* EditorWindow.m */; };
 		D83159501651D99F00B0A613 /* GUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D831594F1651D99F00B0A613 /* GUIController.m */; };
 		D83159521651F1F800B0A613 /* GUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D831594F1651D99F00B0A613 /* GUIController.m */; };
 		D83159551652070400B0A613 /* GUIScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D83159541652070400B0A613 /* GUIScreen.m */; };
@@ -65,6 +65,14 @@
 		D874AC571641E8150085799C /* OpenGLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC561641E8120085799C /* OpenGLRenderer.m */; };
 		D874AC581641E8150085799C /* OpenGLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D874AC561641E8120085799C /* OpenGLRenderer.m */; };
 		D8896C66164F431E0055668D /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8896C65164F431E0055668D /* InputController.m */; };
+		D89A6EFD165DAC860063A573 /* EntityTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89A6EFB165DAC860063A573 /* EntityTableCellView.xib */; };
+		D89A6F01165DAEE20063A573 /* EntityTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89A6F00165DAEE20063A573 /* EntityTableCellView.m */; };
+		D89A6F0A165DBDBD0063A573 /* EntityEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = D89A6F09165DBDBD0063A573 /* EntityEditor.m */; };
+		D89A6F0D165DBEB50063A573 /* EntityEditor.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89A6F0B165DBEB50063A573 /* EntityEditor.xib */; };
+		D89A6F12165DC2040063A573 /* EditorSourceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89A6F11165DC2040063A573 /* EditorSourceView.m */; };
+		D89A6F1A165DC9690063A573 /* EditorMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89A6F18165DC9680063A573 /* EditorMainView.xib */; };
+		D89A6F1E165DC9F90063A573 /* EditorMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89A6F1D165DC9F90063A573 /* EditorMainView.m */; };
+		D89A6F21165DCA2B0063A573 /* EditorSourceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89A6F1F165DCA2B0063A573 /* EditorSourceView.xib */; };
 		D8A3317C163DFFDB00014E23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A3317B163DFFDB00014E23 /* UIKit.framework */; };
 		D8A3317E163DFFDB00014E23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A3317D163DFFDB00014E23 /* Foundation.framework */; };
 		D8A33180163DFFDB00014E23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A3317F163DFFDB00014E23 /* CoreGraphics.framework */; };
@@ -123,10 +131,10 @@
 		D811DF5916479B24001EE707 /* MeshRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeshRenderer.m; path = Common/MeshRenderer.m; sourceTree = "<group>"; };
 		D811DF5B16479D5B001EE707 /* EntityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityController.h; path = Common/EntityController.h; sourceTree = "<group>"; };
 		D811DF5C16479D5B001EE707 /* EntityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntityController.m; path = Common/EntityController.m; sourceTree = "<group>"; };
-		D81D0EDB1655F24A001C7FF7 /* EditorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorWindowController.h; sourceTree = "<group>"; };
-		D81D0EDC1655F24A001C7FF7 /* EditorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorWindowController.m; sourceTree = "<group>"; };
+		D81D0EDB1655F24A001C7FF7 /* EditorWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorWindow.h; sourceTree = "<group>"; };
 		D81D0EE01655F29C001C7FF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EditorWindow.xib; sourceTree = "<group>"; };
 		D826A2161643822900F9E0F6 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
+		D826BF2C165E1A3400FD32A5 /* EditorWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorWindow.m; sourceTree = "<group>"; };
 		D831594E1651D99F00B0A613 /* GUIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIController.h; path = Common/GUIController.h; sourceTree = "<group>"; };
 		D831594F1651D99F00B0A613 /* GUIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUIController.m; path = Common/GUIController.m; sourceTree = "<group>"; };
 		D83159531652070300B0A613 /* GUIScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIScreen.h; path = Common/GUIScreen.h; sourceTree = "<group>"; };
@@ -184,6 +192,18 @@
 		D874AC561641E8120085799C /* OpenGLRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLRenderer.m; path = Common/OpenGLRenderer.m; sourceTree = "<group>"; };
 		D8896C64164F431E0055668D /* InputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputController.h; path = Common/InputController.h; sourceTree = "<group>"; };
 		D8896C65164F431E0055668D /* InputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputController.m; path = Common/InputController.m; sourceTree = "<group>"; };
+		D89A6EFC165DAC860063A573 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EntityTableCellView.xib; sourceTree = "<group>"; };
+		D89A6EFF165DAEE20063A573 /* EntityTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityTableCellView.h; sourceTree = "<group>"; };
+		D89A6F00165DAEE20063A573 /* EntityTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityTableCellView.m; sourceTree = "<group>"; };
+		D89A6F08165DBDBD0063A573 /* EntityEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityEditor.h; sourceTree = "<group>"; };
+		D89A6F09165DBDBD0063A573 /* EntityEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityEditor.m; sourceTree = "<group>"; };
+		D89A6F0C165DBEB50063A573 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EntityEditor.xib; sourceTree = "<group>"; };
+		D89A6F10165DC2040063A573 /* EditorSourceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorSourceView.h; sourceTree = "<group>"; };
+		D89A6F11165DC2040063A573 /* EditorSourceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorSourceView.m; sourceTree = "<group>"; };
+		D89A6F19165DC9690063A573 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EditorMainView.xib; sourceTree = "<group>"; };
+		D89A6F1C165DC9F90063A573 /* EditorMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorMainView.h; sourceTree = "<group>"; };
+		D89A6F1D165DC9F90063A573 /* EditorMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorMainView.m; sourceTree = "<group>"; };
+		D89A6F20165DCA2B0063A573 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EditorSourceView.xib; sourceTree = "<group>"; };
 		D8A33177163DFFDB00014E23 /* Pippin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pippin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A3317B163DFFDB00014E23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D8A3317D163DFFDB00014E23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -272,8 +292,16 @@
 			children = (
 				D874AB871640D7140085799C /* AppDelegate.h */,
 				D874AB881640D7140085799C /* AppDelegate.m */,
-				D81D0EDB1655F24A001C7FF7 /* EditorWindowController.h */,
-				D81D0EDC1655F24A001C7FF7 /* EditorWindowController.m */,
+				D89A6F1C165DC9F90063A573 /* EditorMainView.h */,
+				D89A6F1D165DC9F90063A573 /* EditorMainView.m */,
+				D89A6F10165DC2040063A573 /* EditorSourceView.h */,
+				D89A6F11165DC2040063A573 /* EditorSourceView.m */,
+				D81D0EDB1655F24A001C7FF7 /* EditorWindow.h */,
+				D826BF2C165E1A3400FD32A5 /* EditorWindow.m */,
+				D89A6F08165DBDBD0063A573 /* EntityEditor.h */,
+				D89A6F09165DBDBD0063A573 /* EntityEditor.m */,
+				D89A6EFF165DAEE20063A573 /* EntityTableCellView.h */,
+				D89A6F00165DAEE20063A573 /* EntityTableCellView.m */,
 				D874ABA81640D7CC0085799C /* MacOpenGLView.h */,
 				D874ABA91640D7CC0085799C /* MacOpenGLView.m */,
 				D874AC471641A35F0085799C /* Frameworks */,
@@ -285,13 +313,17 @@
 		D874AB7C1640D7140085799C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D874AB8A1640D7150085799C /* MainMenu.xib */,
-				D874AB7D1640D7140085799C /* Pippin Mac-Info.plist */,
+				D874AB841640D7140085799C /* Credits.rtf */,
+				D89A6F18165DC9680063A573 /* EditorMainView.xib */,
+				D89A6F1F165DCA2B0063A573 /* EditorSourceView.xib */,
+				D81D0EDF1655F29C001C7FF7 /* EditorWindow.xib */,
+				D89A6F0B165DBEB50063A573 /* EntityEditor.xib */,
+				D89A6EFB165DAC860063A573 /* EntityTableCellView.xib */,
 				D874AB7E1640D7140085799C /* InfoPlist.strings */,
 				D874AB811640D7140085799C /* main.m */,
+				D874AB8A1640D7150085799C /* MainMenu.xib */,
+				D874AB7D1640D7140085799C /* Pippin Mac-Info.plist */,
 				D874AB831640D7140085799C /* Pippin Mac-Prefix.pch */,
-				D874AB841640D7140085799C /* Credits.rtf */,
-				D81D0EDF1655F29C001C7FF7 /* EditorWindow.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -592,6 +624,10 @@
 				D874AB8C1640D7150085799C /* MainMenu.xib in Resources */,
 				D826A2181643822900F9E0F6 /* data in Resources */,
 				D81D0EE11655F29C001C7FF7 /* EditorWindow.xib in Resources */,
+				D89A6EFD165DAC860063A573 /* EntityTableCellView.xib in Resources */,
+				D89A6F0D165DBEB50063A573 /* EntityEditor.xib in Resources */,
+				D89A6F1A165DC9690063A573 /* EditorMainView.xib in Resources */,
+				D89A6F21165DCA2B0063A573 /* EditorSourceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,7 +723,11 @@
 				D8DBBB571650AE1100A4D2DB /* MouseInputEvent.m in Sources */,
 				D8DBBB5B1650AE3900A4D2DB /* TouchInputEvent.m in Sources */,
 				D831595D16520D5300B0A613 /* JSONParser.m in Sources */,
-				D81D0EDD1655F24A001C7FF7 /* EditorWindowController.m in Sources */,
+				D89A6F01165DAEE20063A573 /* EntityTableCellView.m in Sources */,
+				D89A6F0A165DBDBD0063A573 /* EntityEditor.m in Sources */,
+				D89A6F12165DC2040063A573 /* EditorSourceView.m in Sources */,
+				D89A6F1E165DC9F90063A573 /* EditorMainView.m in Sources */,
+				D826BF2D165E1A3400FD32A5 /* EditorWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +836,38 @@
 				D874AB9B1640D7150085799C /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D89A6EFB165DAC860063A573 /* EntityTableCellView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D89A6EFC165DAC860063A573 /* en */,
+			);
+			name = EntityTableCellView.xib;
+			sourceTree = "<group>";
+		};
+		D89A6F0B165DBEB50063A573 /* EntityEditor.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D89A6F0C165DBEB50063A573 /* en */,
+			);
+			name = EntityEditor.xib;
+			sourceTree = "<group>";
+		};
+		D89A6F18165DC9680063A573 /* EditorMainView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D89A6F19165DC9690063A573 /* en */,
+			);
+			name = EditorMainView.xib;
+			sourceTree = "<group>";
+		};
+		D89A6F1F165DCA2B0063A573 /* EditorSourceView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D89A6F20165DCA2B0063A573 /* en */,
+			);
+			name = EditorSourceView.xib;
 			sourceTree = "<group>";
 		};
 		D8A33188163DFFDB00014E23 /* InfoPlist.strings */ = {

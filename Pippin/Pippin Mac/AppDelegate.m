@@ -7,16 +7,16 @@
 //
 
 #import "AppDelegate.h"
-#import "EditorWindowController.h"
+#import "EditorWindow.h"
 
 @implementation AppDelegate
 
-@synthesize editorWindowController;
+@synthesize editorWindow;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	self.editorWindowController = [[EditorWindowController alloc] initWithWindowNibName:@"EditorWindow"];
-	[self.editorWindowController showWindow:self];
+	self.editorWindow = [[EditorWindow alloc] initWithWindowNibName:@"EditorWindow"];
+	[self.editorWindow showWindow:self];
 }
 
 @end

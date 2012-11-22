@@ -41,7 +41,7 @@ static CVReturn OnDisplayLink( CVDisplayLinkRef displayLink, const CVTimeStamp *
 	return kCVReturnSuccess;
 }
 
-- (void) dealloc
+- (void)dealloc
 {	
 	// Stop the display link BEFORE releasing anything in the view
 	// otherwise the display link thread may call into the view and crash

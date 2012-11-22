@@ -8,12 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class EditorWindowController;
+@class EditorWindow;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
 }
 
-@property (strong, nonatomic) EditorWindowController *editorWindowController;
+@property (strong, nonatomic) EditorWindow *editorWindow;
 
 @end
