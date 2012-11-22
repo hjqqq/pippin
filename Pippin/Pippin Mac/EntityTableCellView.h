@@ -10,7 +10,7 @@
 
 @class Entity;
 
-@interface EntityTableCellView : NSTableCellView
+@interface EntityTableCellView : NSTableCellView <NSTextFieldDelegate>
 {
 }
 

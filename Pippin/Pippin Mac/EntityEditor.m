@@ -43,8 +43,9 @@
 		[[NSBundle mainBundle] loadNibNamed:@"EntityTableCellView" owner:self topLevelObjects:&topLevelObjects];
 		cell = (EntityTableCellView *)[topLevelObjects objectAtIndex:0];
 		cell.identifier = @"EntityTableCellView";
-		cell.entity = self.entity;
 	}
+	
+	cell.entity = self.entity;
 	
 	return cell;
 }

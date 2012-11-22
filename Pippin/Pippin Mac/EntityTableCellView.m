@@ -28,9 +28,37 @@
 
 #pragma mark NSTextFieldDelegate
 
-- (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor;
+- (void)controlTextDidEndEditing:(NSNotification *)obj;
 {
-	return NO;
+	id control = [obj object];
+	if( control == self.nameTextField )
+	{
+		self.entity.name = self.nameTextField.stringValue;
+	}
+	else if( control == self.xPositionTextField )
+	{
+		GLKVector3 pos = self.entity.position;
+		pos.x = [control floatValue];
+		self.entity.position = pos;
+	}
+	else if( control == self.yPositionTextField )
+	{
+		GLKVector3 pos = self.entity.position;
+		pos.y = [control floatValue];
+		self.entity.position = pos;
+	}
+	else if( control == self.xSizeTextField )
+	{
+		GLKVector3 size = self.entity.size;
+		size.x = [control floatValue];
+		self.entity.size = size;
+	}
+	else if( control == self.ySizeTextField )
+	{
+		GLKVector3 size = self.entity.size;
+		size.y = [control floatValue];
+		self.entity.size = size;
+	}
 }
 
 @end
